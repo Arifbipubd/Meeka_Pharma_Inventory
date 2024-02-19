@@ -16183,3 +16183,12 @@ span.flatpickr-weekday {
   background: rgb(108, 189, 152, 0.1);
   color: #6cbd98;
 }
+.statusPending {
+  border: 0.5px solid #539bff;
+  background: rgb(83, 155, 255, 0.1);
+  color: #539bff;
+}
+
+table.dataTable.table-striped > tbody > tr.odd {
+  background: #f3f9ff !important;
+}
