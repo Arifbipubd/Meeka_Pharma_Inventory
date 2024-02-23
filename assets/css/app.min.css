@@ -16192,3 +16192,10 @@ span.flatpickr-weekday {
 table.dataTable.table-striped > tbody > tr.odd {
   background: #f3f9ff !important;
 }
+
+.form-check-input[type="checkbox"] {
+  border: 1px solid #6cbd98 !important;
+}
+.form-check-input:checked {
+  background-color: #6cbd98 !important;
+}
