@@ -16199,3 +16199,22 @@ table.dataTable.table-striped > tbody > tr.odd {
 .form-check-input:checked {
   background-color: #6cbd98 !important;
 }
+.todoAddBtn {
+  background-color: rgb(108, 189, 152, 0.2);
+  color: #6cbd98;
+}
+.todoAddBtn:hover {
+  background-color: rgb(108, 189, 152, 0.2);
+  color: #6cbd98;
+}
+.todoRemoveBtn {
+  background-color: rgb(219, 40, 44, 0.2);
+  color: #db282c;
+}
+.todoRemoveBtn:hover {
+  background-color: rgb(219, 40, 44, 0.2);
+  color: #db282c;
+}
+.todoInputDiv {
+  display: none;
+}

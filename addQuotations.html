@@ -12,7 +12,7 @@
 >
   <head>
     <meta charset="utf-8" />
-    <title>LC List | Meeka Pharmacare</title>
+    <title>Add Quotations | Meeka Pharmacare</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       content="Premium Multipurpose Admin & Dashboard Template"
@@ -1104,82 +1104,351 @@
                           class="card-header d-flex justify-content-between align-items-center"
                         >
                           <div>
-                            <h5 class="card-title mb-0">LC List</h5>
+                            <h5 class="card-title mb-0">Add Quotation</h5>
                           </div>
                           <div>
-                            <a href="addLc.html">
-                              <button
-                                class="btn primaryBtn d-flex align-items-center"
-                              >
-                                <span><i class="las la-plus me-2"></i></span>
-                                <span>Add LC</span>
-                              </button>
-                            </a>
+                            <button
+                              class="btn primaryBtn d-flex align-items-center"
+                            >
+                              <span><i class="las la-eye me-2"></i></span>
+                              <span>View Quotation List</span>
+                            </button>
                           </div>
                         </div>
-                        <div class="card-body table-responsive">
-                          <table
-                            id="buttons-datatables"
-                            class="table table-striped align-middle"
-                            style="width: 100%"
-                          >
-                            <thead>
-                              <tr>
-                                <th>#</th>
-                                <th>LC No.</th>
-                                <th>LC Date</th>
-                                <th>Customer</th>
-                                <th>Manufacturer</th>
-                                <th>Country origin of Supplier</th>
-                                <th class="colEnd">
-                                  <div>Action</div>
-                                </th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>01</td>
-                                <td>12345678</td>
-                                <td>12 Nov 23</td>
-                                <td>Eskayef Pharmaceuticals Limited</td>
-                                <td>Micro Orgo Chem. India</td>
-                                <td>India</td>
-                                <td class="colEnd">
-                                  <div class="dropdown">
-                                    <button
-                                      class="btn dropdown-toggle"
-                                      type="button"
-                                      id="dropdownMenuButton"
-                                      data-bs-toggle="dropdown"
-                                      aria-expanded="false"
-                                    >
-                                      <i class="las la-ellipsis-v"></i>
-                                    </button>
-                                    <ul
-                                      class="dropdown-menu"
-                                      aria-labelledby="dropdownMenuButton"
-                                    >
-                                      <li>
-                                        <a class="dropdown-item" href="#"
-                                          >Edit</a
-                                        >
-                                      </li>
-                                      <li>
-                                        <a class="dropdown-item" href="#"
-                                          >Delete</a
-                                        >
-                                      </li>
-                                      <li>
-                                        <a class="dropdown-item" href="#"
-                                          >View</a
-                                        >
-                                      </li>
-                                    </ul>
-                                  </div>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
+                        <div class="card-body p-5">
+                          <form action="">
+                            <div class="row">
+                              <div class="col-lg-3">
+                                <div class="mb-3">
+                                  <label class="form-label">Date</label>
+                                  <input
+                                    type="date"
+                                    class="form-control"
+                                    name="date"
+                                    placeholder="Type Here"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-lg-3">
+                                <div class="mb-3">
+                                  <label class="form-label">Ref</label>
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    name="ref"
+                                    placeholder="Type Here"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-lg-3">
+                                <div class="mb-3">
+                                  <label class="form-label">Buyer Name</label>
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    name="buyer_name"
+                                    placeholder="Type Here"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-lg-3">
+                                <div class="mb-3">
+                                  <label class="form-label">Buyer Email</label>
+                                  <input
+                                    type="email"
+                                    class="form-control"
+                                    name="buyer_email"
+                                    placeholder="Type Here"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-lg-12">
+                                <div class="mb-3">
+                                  <label class="form-label"
+                                    >Buyer Address</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    name="buyer_address"
+                                    placeholder="Type Here"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-lg-6">
+                                <div class="mb-3">
+                                  <label class="form-label">K/Attn</label>
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    name="attn"
+                                    placeholder="Type Here"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-lg-6">
+                                <div class="mb-3">
+                                  <label class="form-label"
+                                    >Quotation Subject</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    name="quotation_subject"
+                                    placeholder="Type Here"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-lg-12">
+                                <div class="mb-3">
+                                  <label class="form-label">Message Body</label>
+                                  <textarea
+                                    class="form-control"
+                                    name="message_body"
+                                    id=""
+                                    cols=""
+                                    rows="6"
+                                    placeholder="Type Here"
+                                  >
+                                  </textarea>
+                                </div>
+                              </div>
+                              <div class="col-lg-4">
+                                <div>
+                                  <label
+                                    for=""
+                                    class="form-label d-flex align-items-center"
+                                    >Product
+                                    <i
+                                      class="las la-question-circle tooltip-icon mx-1"
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Product"
+                                      rel="tooltip"
+                                    ></i
+                                  ></label>
+                                  <select id="" placeholder="Choose Product">
+                                    <option value="">
+                                      Select a Product...
+                                    </option>
+                                    <option>Product 1</option>
+                                    <option>Product 2</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="col-lg-4">
+                                <div class="mb-3">
+                                  <label class="form-label">Unit Price</label>
+                                  <input
+                                    type="number"
+                                    class="form-control"
+                                    name="unit_price"
+                                    placeholder="Type Here"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-lg-4">
+                                <div class="mb-3">
+                                  <label class="form-label">Quantity</label>
+                                  <input
+                                    type="number"
+                                    class="form-control"
+                                    name="quantity"
+                                    placeholder="Type Here"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-lg-4">
+                                <div>
+                                  <label
+                                    for=""
+                                    class="form-label d-flex align-items-center"
+                                    >Manufacturer
+                                    <i
+                                      class="las la-question-circle tooltip-icon mx-1"
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Manufacturer"
+                                      rel="tooltip"
+                                    ></i
+                                  ></label>
+                                  <select
+                                    id=""
+                                    placeholder="Choose Manufacturer"
+                                  >
+                                    <option value="">
+                                      Select a Manufacturer...
+                                    </option>
+                                    <option>Manufacturer 1</option>
+                                    <option>Manufacturer 2</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="col-lg-4">
+                                <div>
+                                  <label
+                                    for=""
+                                    class="form-label d-flex align-items-center"
+                                    >Supplier
+                                    <i
+                                      class="las la-question-circle tooltip-icon mx-1"
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Supplier"
+                                      rel="tooltip"
+                                    ></i
+                                  ></label>
+                                  <select id="" placeholder="Choose Supplier">
+                                    <option value="">
+                                      Select a Supplier...
+                                    </option>
+                                    <option>Supplier 1</option>
+                                    <option>Supplier 2</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="col-lg-4">
+                                <div>
+                                  <label
+                                    for=""
+                                    class="form-label d-flex align-items-center"
+                                    >LC Beneficiary
+                                    <i
+                                      class="las la-question-circle tooltip-icon mx-1"
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="LC Beneficiary"
+                                      rel="tooltip"
+                                    ></i
+                                  ></label>
+                                  <select
+                                    id=""
+                                    placeholder="Choose LC Beneficiary"
+                                  >
+                                    <option value="">
+                                      Select a LC Beneficiary...
+                                    </option>
+                                    <option>LC Beneficiary 1</option>
+                                    <option>LC Beneficiary 2</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="col-lg-4">
+                                <div>
+                                  <label
+                                    for=""
+                                    class="form-label d-flex align-items-center"
+                                    >Payment Type
+                                    <i
+                                      class="las la-question-circle tooltip-icon mx-1"
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Payment Type"
+                                      rel="tooltip"
+                                    ></i
+                                  ></label>
+                                  <select
+                                    id=""
+                                    placeholder="Choose Payment Type"
+                                  >
+                                    <option value="">
+                                      Select a Payment Type...
+                                    </option>
+                                    <option>Payment Type 1</option>
+                                    <option>Payment Type 2</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="col-lg-4">
+                                <div>
+                                  <label
+                                    for=""
+                                    class="form-label d-flex align-items-center"
+                                    >Shipment
+                                    <i
+                                      class="las la-question-circle tooltip-icon mx-1"
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Shipment"
+                                      rel="tooltip"
+                                    ></i
+                                  ></label>
+                                  <select id="" placeholder="Choose Shipment">
+                                    <option value="">
+                                      Select a Shipment...
+                                    </option>
+                                    <option>Shipment 1</option>
+                                    <option>Shipment 2</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="col-lg-4">
+                                <div class="mb-3">
+                                  <label class="form-label"
+                                    >Price Validity</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    name="price_validity"
+                                    placeholder="Type Here"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-lg-12">
+                                <div class="mb-3">
+                                  <label class="form-label"
+                                    >Conclusion Message Body</label
+                                  >
+                                  <textarea
+                                    class="form-control"
+                                    name="conclusion_message_body"
+                                    id=""
+                                    cols=""
+                                    rows="6"
+                                    placeholder="Type Here"
+                                  >
+                                  </textarea>
+                                </div>
+                              </div>
+                              <div class="col-lg-4">
+                                <div class="mb-3">
+                                  <label class="form-label">Name</label>
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    name="name"
+                                    placeholder="Type Here"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-lg-4">
+                                <div class="mb-3">
+                                  <label class="form-label">Designation</label>
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    name="designation"
+                                    placeholder="Type Here"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-12">
+                              <div class="my-3">
+                                <div>
+                                  <button
+                                    class="btn primaryBtn d-flex align-items-center"
+                                  >
+                                    <span
+                                      ><i class="las la-check me-2"></i
+                                    ></span>
+                                    <span>Save</span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
                         </div>
                       </div>
                     </div>
@@ -1262,7 +1531,32 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
 
     <script src="assets/js/pages/datatables.init.js"></script>
+
+    <!-------------Jquery-------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js"
+      integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css"
+      integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg="
+      crossorigin="anonymous"
+    />
     <!-- App js -->
     <script src="assets/js/app.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("select").selectize({
+          sortField: "text",
+        });
+      });
+
+      $(function () {
+        $("[rel='tooltip']").tooltip();
+      });
+    </script>
   </body>
 </html>

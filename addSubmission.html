@@ -12,7 +12,7 @@
 >
   <head>
     <meta charset="utf-8" />
-    <title>LC List | Meeka Pharmacare</title>
+    <title>Add Submission | Meeka Pharmacare</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       content="Premium Multipurpose Admin & Dashboard Template"
@@ -1104,82 +1104,374 @@
                           class="card-header d-flex justify-content-between align-items-center"
                         >
                           <div>
-                            <h5 class="card-title mb-0">LC List</h5>
+                            <h5 class="card-title mb-0">Add Submission</h5>
                           </div>
                           <div>
-                            <a href="addLc.html">
-                              <button
-                                class="btn primaryBtn d-flex align-items-center"
-                              >
-                                <span><i class="las la-plus me-2"></i></span>
-                                <span>Add LC</span>
-                              </button>
-                            </a>
+                            <button
+                              class="btn primaryBtn d-flex align-items-center"
+                            >
+                              <span><i class="las la-eye me-2"></i></span>
+                              <span>View Submission List</span>
+                            </button>
                           </div>
                         </div>
-                        <div class="card-body table-responsive">
-                          <table
-                            id="buttons-datatables"
-                            class="table table-striped align-middle"
-                            style="width: 100%"
-                          >
-                            <thead>
-                              <tr>
-                                <th>#</th>
-                                <th>LC No.</th>
-                                <th>LC Date</th>
-                                <th>Customer</th>
-                                <th>Manufacturer</th>
-                                <th>Country origin of Supplier</th>
-                                <th class="colEnd">
-                                  <div>Action</div>
-                                </th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>01</td>
-                                <td>12345678</td>
-                                <td>12 Nov 23</td>
-                                <td>Eskayef Pharmaceuticals Limited</td>
-                                <td>Micro Orgo Chem. India</td>
-                                <td>India</td>
-                                <td class="colEnd">
-                                  <div class="dropdown">
+                        <div class="card-body p-5">
+                          <form action="">
+                            <div class="row">
+                              <div class="col-lg-4">
+                                <div>
+                                  <label
+                                    for=""
+                                    class="form-label d-flex align-items-center"
+                                    >Product
+                                    <i
+                                      class="las la-question-circle tooltip-icon mx-1"
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Product"
+                                      rel="tooltip"
+                                    ></i
+                                  ></label>
+                                  <select id="" placeholder="Choose Product">
+                                    <option value="">
+                                      Select a Product...
+                                    </option>
+                                    <option>Product 1</option>
+                                    <option>Product 2</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="col-lg-4">
+                                <div>
+                                  <label
+                                    for=""
+                                    class="form-label d-flex align-items-center"
+                                    >Sample Type
+                                    <i
+                                      class="las la-question-circle tooltip-icon mx-1"
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Sample Type"
+                                      rel="tooltip"
+                                    ></i
+                                  ></label>
+                                  <select
+                                    id=""
+                                    placeholder="Choose Sample Type"
+                                  >
+                                    <option value="">
+                                      Select a Sample Type...
+                                    </option>
+                                    <option>Sample Type 1</option>
+                                    <option>Sample Type 2</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="col-lg-4">
+                                <div>
+                                  <label
+                                    for=""
+                                    class="form-label d-flex align-items-center"
+                                    >Customer
+                                    <i
+                                      class="las la-question-circle tooltip-icon mx-1"
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Customer"
+                                      rel="tooltip"
+                                    ></i
+                                  ></label>
+                                  <select id="" placeholder="Choose Customer">
+                                    <option value="">
+                                      Select a Customer...
+                                    </option>
+                                    <option>Customer 1</option>
+                                    <option>Customer 2</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="col-lg-4">
+                                <div class="mb-3">
+                                  <label class="form-label"
+                                    >Submission Date</label
+                                  >
+                                  <input
+                                    type="date"
+                                    class="form-control"
+                                    name="submission_date"
+                                    placeholder="Type Here"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-lg-4">
+                                <div class="mb-3">
+                                  <label class="form-label"
+                                    >Submission Person</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    name="submission_person"
+                                    placeholder="Type Here"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-lg-4">
+                                <div class="mb-3">
+                                  <label class="form-label"
+                                    >Attention Concern</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    name="attention_concern"
+                                    placeholder="Type Here"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-lg-4">
+                                <div class="mb-3">
+                                  <label class="form-label">Designation</label>
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    name="designation"
+                                    placeholder="Type Here"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-lg-4">
+                                <div>
+                                  <label
+                                    for=""
+                                    class="form-label d-flex align-items-center"
+                                    >Manufacturer
+                                    <i
+                                      class="las la-question-circle tooltip-icon mx-1"
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Manufacturer"
+                                      rel="tooltip"
+                                    ></i
+                                  ></label>
+                                  <select
+                                    id=""
+                                    placeholder="Choose Manufacturer"
+                                  >
+                                    <option value="">
+                                      Select a Manufacturer...
+                                    </option>
+                                    <option>Manufacturer 1</option>
+                                    <option>Manufacturer 2</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="col-lg-4">
+                                <div>
+                                  <label
+                                    for=""
+                                    class="form-label d-flex align-items-center"
+                                    >Supplier
+                                    <i
+                                      class="las la-question-circle tooltip-icon mx-1"
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Supplier"
+                                      rel="tooltip"
+                                    ></i
+                                  ></label>
+                                  <select id="" placeholder="Choose Supplier">
+                                    <option value="">
+                                      Select a Supplier...
+                                    </option>
+                                    <option>Supplier 1</option>
+                                    <option>Supplier 2</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="col-lg-6">
+                                <div>
+                                  <label
+                                    for=""
+                                    class="form-label d-flex align-items-center"
+                                    >Cost Of Raw
+                                    <i
+                                      class="las la-question-circle tooltip-icon mx-1"
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Cost Of Raw"
+                                      rel="tooltip"
+                                    ></i
+                                  ></label>
+                                  <select
+                                    id=""
+                                    placeholder="Choose Cost Of Raw"
+                                  >
+                                    <option value="">
+                                      Select a Cost Of Raw...
+                                    </option>
+                                    <option>Cost Of Raw 1</option>
+                                    <option>Cost Of Raw 2</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="col-lg-6">
+                                <div>
+                                  <label
+                                    for=""
+                                    class="form-label d-flex align-items-center"
+                                    >PD Sample
+                                    <i
+                                      class="las la-question-circle tooltip-icon mx-1"
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="PD Sample"
+                                      rel="tooltip"
+                                    ></i
+                                  ></label>
+                                  <select id="" placeholder="Choose PD Sample">
+                                    <option value="">
+                                      Select a PD Sample...
+                                    </option>
+                                    <option>PD Sample 1</option>
+                                    <option>PD Sample 2</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="col-lg-6">
+                                <div class="mb-3">
+                                  <label class="form-label">Ref</label>
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    name="ref"
+                                    placeholder="Type Here"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-lg-6">
+                                <div>
+                                  <label
+                                    for=""
+                                    class="form-label d-flex align-items-center"
+                                    >Reference Documents
+                                    <i
+                                      class="las la-question-circle tooltip-icon mx-1"
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Reference Documents"
+                                      rel="tooltip"
+                                    ></i
+                                  ></label>
+                                  <select
+                                    id=""
+                                    placeholder="Choose Reference Documents"
+                                  >
+                                    <option value="">
+                                      Select a Reference Documents...
+                                    </option>
+                                    <option>Reference Documents 1</option>
+                                    <option>Reference Documents 2</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div
+                                class="d-flex justify-content-between align-items-center"
+                              >
+                                <div>
+                                  <h5 class="card-title my-5">
+                                    Sample Submission Items
+                                  </h5>
+                                </div>
+                                <div>
+                                  <button
+                                    type="button"
+                                    onclick="addDiv()"
+                                    class="btn todoAddBtn d-flex align-items-center"
+                                  >
+                                    <i class="las la-plus"></i>
+                                  </button>
+                                </div>
+                              </div>
+                              <div id="todoInputDiv">
+                                <div class="row todoInputDiv">
+                                  <div
+                                    class="col-lg-12 d-flex justify-content-end"
+                                  >
                                     <button
-                                      class="btn dropdown-toggle"
                                       type="button"
-                                      id="dropdownMenuButton"
-                                      data-bs-toggle="dropdown"
-                                      aria-expanded="false"
+                                      onclick="removeDiv(this)"
+                                      class="btn todoRemoveBtn"
                                     >
-                                      <i class="las la-ellipsis-v"></i>
+                                      <i class="las la-minus"></i>
                                     </button>
-                                    <ul
-                                      class="dropdown-menu"
-                                      aria-labelledby="dropdownMenuButton"
-                                    >
-                                      <li>
-                                        <a class="dropdown-item" href="#"
-                                          >Edit</a
-                                        >
-                                      </li>
-                                      <li>
-                                        <a class="dropdown-item" href="#"
-                                          >Delete</a
-                                        >
-                                      </li>
-                                      <li>
-                                        <a class="dropdown-item" href="#"
-                                          >View</a
-                                        >
-                                      </li>
-                                    </ul>
                                   </div>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
+                                  <div class="col-lg-3">
+                                    <div class="mb-3">
+                                      <label class="form-label"
+                                        >Standard/Garde</label
+                                      >
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        name="grade"
+                                        placeholder="Type Here"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-3">
+                                    <div class="mb-3">
+                                      <label class="form-label">Batch No</label>
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        name="batch_no"
+                                        placeholder="Type Here"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-3">
+                                    <div class="mb-3">
+                                      <label class="form-label">Quantity</label>
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        name="quantity"
+                                        placeholder="Type Here"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-3">
+                                    <div class="mb-3">
+                                      <label class="form-label"
+                                        >No. Of Pack</label
+                                      >
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        name="no_of_pack"
+                                        placeholder="Type Here"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-12">
+                              <div class="my-3">
+                                <div>
+                                  <button
+                                    class="btn primaryBtn d-flex align-items-center"
+                                  >
+                                    <span
+                                      ><i class="las la-check me-2"></i
+                                    ></span>
+                                    <span>Save</span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
                         </div>
                       </div>
                     </div>
@@ -1262,7 +1554,45 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
 
     <script src="assets/js/pages/datatables.init.js"></script>
+
+    <!-------------Jquery-------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js"
+      integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css"
+      integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg="
+      crossorigin="anonymous"
+    />
     <!-- App js -->
     <script src="assets/js/app.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("select").selectize({
+          sortField: "text",
+        });
+      });
+
+      $(function () {
+        $("[rel='tooltip']").tooltip();
+      });
+    </script>
+    <script>
+      function addDiv() {
+        // Clone the hidden div
+        var cloneDiv = document.querySelector(".todoInputDiv").cloneNode(true);
+        cloneDiv.style.display = "flex"; // Show the cloned div
+        document.getElementById("todoInputDiv").appendChild(cloneDiv); // Append to container
+      }
+
+      function removeDiv(element) {
+        // Remove the parent div of the clicked remove button
+        element.parentNode.parentNode.remove();
+      }
+    </script>
   </body>
 </html>
