@@ -1277,27 +1277,20 @@
                                 <div>
                                   <h5 class="card-title my-5">Purchase Item</h5>
                                 </div>
-                                <div>
-                                  <button
-                                    type="button"
-                                    onclick="addDiv()"
-                                    class="btn todoAddBtn d-flex align-items-center"
-                                  >
-                                    <i class="las la-plus"></i>
-                                  </button>
-                                </div>
                               </div>
                               <div id="todoInputDiv">
-                                <div class="row todoInputDiv">
+                                <div
+                                  class="row align-items-center justify-content-center todoInputDiv"
+                                >
                                   <div
-                                    class="col-lg-12 d-flex justify-content-end"
+                                    class="col-lg-1 d-flex justify-content-center"
                                   >
                                     <button
                                       type="button"
-                                      onclick="removeDiv(this)"
-                                      class="btn todoRemoveBtn"
+                                      onclick="addDiv()"
+                                      class="btn todoAddBtn d-flex align-items-center"
                                     >
-                                      <i class="las la-minus"></i>
+                                      <i class="las la-plus"></i>
                                     </button>
                                   </div>
                                   <div class="col-lg-4">
@@ -1311,7 +1304,7 @@
                                       />
                                     </div>
                                   </div>
-                                  <div class="col-lg-4">
+                                  <div class="col-lg-2">
                                     <div class="mb-3">
                                       <label class="form-label"
                                         >Total Package</label
@@ -1336,6 +1329,17 @@
                                         placeholder="Type Here"
                                       />
                                     </div>
+                                  </div>
+                                  <div
+                                    class="col-lg-1 d-flex justify-content-center"
+                                  >
+                                    <button
+                                      type="button"
+                                      onclick="removeDiv(this)"
+                                      class="btn todoRemoveBtn"
+                                    >
+                                      <i class="las la-minus"></i>
+                                    </button>
                                   </div>
                                 </div>
                               </div>

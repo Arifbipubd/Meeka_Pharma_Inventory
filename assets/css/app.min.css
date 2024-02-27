@@ -16204,6 +16204,8 @@ table.dataTable.table-striped > tbody > tr.odd {
   background-color: #6cbd98 !important;
 }
 .todoAddBtn {
+  height: 45px;
+  width: 45px;
   background-color: rgb(108, 189, 152, 0.2);
   color: #6cbd98;
 }
@@ -16212,6 +16214,8 @@ table.dataTable.table-striped > tbody > tr.odd {
   color: #6cbd98;
 }
 .todoRemoveBtn {
+  height: 45px;
+  width: 45px;
   background-color: rgb(219, 40, 44, 0.2);
   color: #db282c;
 }
