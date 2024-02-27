@@ -16170,6 +16170,10 @@ span.flatpickr-weekday {
   display: flex;
   justify-content: end;
 }
+.colEndTh {
+  float: right !important;
+  border-bottom: none !important;
+}
 .status {
   padding: 5px;
   border-radius: 50px;
