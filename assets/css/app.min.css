@@ -16226,3 +16226,13 @@ table.dataTable.table-striped > tbody > tr.odd {
 .todoInputDiv {
   display: none;
 }
+
+.viewBtn {
+  background-color: transparent !important;
+  border: 0.5px solid #6cbd98;
+  color: #6cbd98;
+}
+.viewBtn:hover {
+  background-color: #6cbd98 !important;
+  color: white;
+}
