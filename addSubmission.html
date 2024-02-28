@@ -1386,17 +1386,6 @@
                                 <div
                                   class="row justify-content-center align-items-center todoInputDiv"
                                 >
-                                  <div
-                                    class="col-lg-1 d-flex justify-content-center"
-                                  >
-                                    <button
-                                      type="button"
-                                      onclick="addDiv()"
-                                      class="btn todoAddBtn d-flex align-items-center"
-                                    >
-                                      <i class="las la-plus"></i>
-                                    </button>
-                                  </div>
                                   <div class="col-lg-3">
                                     <div class="mb-3">
                                       <label class="form-label"
@@ -1410,7 +1399,7 @@
                                       />
                                     </div>
                                   </div>
-                                  <div class="col-lg-2">
+                                  <div class="col-lg-3">
                                     <div class="mb-3">
                                       <label class="form-label">Batch No</label>
                                       <input
@@ -1445,8 +1434,19 @@
                                       />
                                     </div>
                                   </div>
+                                  <div id="todoAddBtn" class="col-lg-1">
+                                    <button
+                                      type="button"
+                                      onclick="addDiv()"
+                                      class="btn todoAddBtn d-flex align-items-center"
+                                    >
+                                      <i class="las la-plus"></i>
+                                    </button>
+                                  </div>
                                   <div
-                                    class="col-lg-1 d-flex justify-content-center"
+                                    id="todoRemoveBtn"
+                                    style="display: none"
+                                    class="col-lg-1"
                                   >
                                     <button
                                       type="button"
@@ -1586,8 +1586,12 @@
     <script>
       function addDiv() {
         // Clone the hidden div
+        let addBtn = document.getElementById("todoAddBtn");
+        let removeBtn = document.getElementById("todoRemoveBtn");
         var cloneDiv = document.querySelector(".todoInputDiv").cloneNode(true);
         cloneDiv.style.display = "flex"; // Show the cloned div
+        addBtn.style.display = "none";
+        removeBtn.style.display = "flex";
         document.getElementById("todoInputDiv").appendChild(cloneDiv); // Append to container
       }
 

@@ -1360,17 +1360,6 @@
                                 <div
                                   class="row align-items-center justify-content-center todoInputDiv"
                                 >
-                                  <div
-                                    class="col-lg-1 d-flex justify-content-center"
-                                  >
-                                    <button
-                                      type="button"
-                                      onclick="addDiv()"
-                                      class="btn todoAddBtn d-flex align-items-center"
-                                    >
-                                      <i class="las la-plus"></i>
-                                    </button>
-                                  </div>
                                   <div class="col-lg-2">
                                     <div>
                                       <label
@@ -1390,63 +1379,38 @@
                                     </div>
                                   </div>
                                   <div class="col-lg-1">
-                                    <div>
-                                      <label
-                                        for=""
-                                        class="form-label d-flex align-items-center"
-                                        >Quantity
-                                      </label>
-                                      <select
-                                        class="form-select mb-3"
-                                        aria-label="Default select example"
+                                    <div class="mb-3">
+                                      <label class="form-label">Quantity</label>
+                                      <input
+                                        type="number"
+                                        class="form-control"
+                                        name="quantity"
+                                        placeholder="Type Here"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-2">
+                                    <div class="mb-3">
+                                      <label class="form-label"
+                                        >Rate Per KG</label
                                       >
-                                        <option selected>
-                                          Choose Quantity
-                                        </option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                      </select>
+                                      <input
+                                        type="number"
+                                        class="form-control"
+                                        name="rate_per_kg"
+                                        placeholder="Type Here"
+                                      />
                                     </div>
                                   </div>
                                   <div class="col-lg-1">
-                                    <div>
-                                      <label
-                                        for=""
-                                        class="form-label d-flex align-items-center"
-                                        >Rate Per KG
-                                      </label>
-                                      <select
-                                        class="form-select mb-3"
-                                        aria-label="Default select example"
-                                      >
-                                        <option selected>
-                                          Choose Rate Per KG
-                                        </option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                      </select>
-                                    </div>
-                                  </div>
-                                  <div class="col-lg-1">
-                                    <div>
-                                      <label
-                                        for=""
-                                        class="form-label d-flex align-items-center"
-                                        >Total Value
-                                      </label>
-                                      <select
-                                        class="form-select mb-3"
-                                        aria-label="Default select example"
-                                      >
-                                        <option selected>
-                                          Choose Total Value
-                                        </option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                      </select>
+                                    <div class="mb-3">
+                                      <label class="form-label"> Value</label>
+                                      <input
+                                        type="number"
+                                        class="form-control"
+                                        name="total_value"
+                                        placeholder="Type Here"
+                                      />
                                     </div>
                                   </div>
                                   <div class="col-lg-2">
@@ -1470,21 +1434,14 @@
                                     </div>
                                   </div>
                                   <div class="col-lg-1">
-                                    <div>
-                                      <label
-                                        for=""
-                                        class="form-label d-flex align-items-center"
-                                        >Profit
-                                      </label>
-                                      <select
-                                        class="form-select mb-3"
-                                        aria-label="Default select example"
-                                      >
-                                        <option selected>Choose Profit</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                      </select>
+                                    <div class="mb-3">
+                                      <label class="form-label">Profit</label>
+                                      <input
+                                        type="number"
+                                        class="form-control"
+                                        name="profit"
+                                        placeholder="Type Here"
+                                      />
                                     </div>
                                   </div>
                                   <div class="col-lg-2">
@@ -1507,8 +1464,19 @@
                                       </select>
                                     </div>
                                   </div>
+                                  <div id="todoAddBtn" class="col-lg-1">
+                                    <button
+                                      type="button"
+                                      onclick="addDiv()"
+                                      class="btn todoAddBtn d-flex align-items-center"
+                                    >
+                                      <i class="las la-plus"></i>
+                                    </button>
+                                  </div>
                                   <div
-                                    class="col-lg-1 d-flex justify-content-center"
+                                    id="todoRemoveBtn"
+                                    style="display: none"
+                                    class="col-lg-1"
                                   >
                                     <button
                                       type="button"
@@ -1648,8 +1616,12 @@
     <script>
       function addDiv() {
         // Clone the hidden div
+        let addBtn = document.getElementById("todoAddBtn");
+        let removeBtn = document.getElementById("todoRemoveBtn");
         var cloneDiv = document.querySelector(".todoInputDiv").cloneNode(true);
         cloneDiv.style.display = "flex"; // Show the cloned div
+        addBtn.style.display = "none";
+        removeBtn.style.display = "flex";
         document.getElementById("todoInputDiv").appendChild(cloneDiv); // Append to container
       }
 
@@ -1657,8 +1629,6 @@
         // Remove the parent div of the clicked remove button
         element.parentNode.parentNode.remove();
       }
-
-      // Initially add one div
       addDiv();
     </script>
   </body>

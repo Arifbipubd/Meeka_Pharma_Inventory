@@ -16214,6 +16214,7 @@ table.dataTable.table-striped > tbody > tr.odd {
   color: #6cbd98;
 }
 .todoRemoveBtn {
+  /* display: none; */
   height: 45px;
   width: 45px;
   background-color: rgb(219, 40, 44, 0.2);
