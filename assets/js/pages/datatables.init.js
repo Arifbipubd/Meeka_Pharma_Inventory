@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.addEventListener("DOMContentLoaded", function () {
     new DataTable("#buttons-datatables", {
       dom: "Bfrtip",
-      buttons: ["copy", "csv", "excel", "print", "pdf"],
+      buttons: ["copy", "csv", "excel", "print"],
     });
   }),
   document.addEventListener("DOMContentLoaded", function () {
