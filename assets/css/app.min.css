@@ -16175,7 +16175,7 @@ span.flatpickr-weekday {
   border-bottom: none !important;
 }
 .status {
-  padding: 5px;
+  padding: 5px 8px;
   border-radius: 50px;
   font-weight: bold;
   display: flex;
@@ -16191,6 +16191,11 @@ span.flatpickr-weekday {
   border: 0.5px solid #539bff;
   background: rgb(83, 155, 255, 0.1);
   color: #539bff;
+}
+.statusCancel {
+  border: 0.5px solid #db282c;
+  background: rgb(219, 40, 44, 0.1);
+  color: #db282c;
 }
 
 table.dataTable.table-striped > tbody > tr.odd {
@@ -16235,5 +16240,29 @@ table.dataTable.table-striped > tbody > tr.odd {
 }
 .viewBtn:hover {
   background-color: #6cbd98 !important;
+  color: white;
+}
+
+.customerProfileSidebar {
+  background-color: #e7ecf1;
+  padding: 30px 5px;
+}
+
+.customerProfileSidebar img {
+  height: 70px;
+  width: 70px;
+  border-radius: 100%;
+}
+.profileBtn {
+  width: 100%;
+  padding: 8px 0;
+  background-color: transparent;
+  border: 0.5px solid #0075be;
+  border-radius: 10px;
+  color: #0075be;
+}
+.profileBtn:hover {
+  background-color: #0075be;
+  transition: 0.5s ease;
   color: white;
 }
