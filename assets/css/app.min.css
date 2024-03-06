@@ -16174,6 +16174,14 @@ span.flatpickr-weekday {
   float: right !important;
   border-bottom: none !important;
 }
+.printStatus {
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .status {
   padding: 5px 8px;
   border-radius: 50px;
@@ -16265,4 +16273,7 @@ table.dataTable.table-striped > tbody > tr.odd {
   background-color: #0075be;
   transition: 0.5s ease;
   color: white;
+}
+.singleProfileBorderBottom{
+  border-bottom: 0.5px solid #e5e5f2;
 }
