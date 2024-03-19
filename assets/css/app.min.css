@@ -16285,7 +16285,7 @@ table.dataTable.table-striped > tbody > tr.odd {
 .mb-20 {
   margin-bottom: 20px !important;
 }
-.mb-30{
+.mb-30 {
   margin-bottom: 30px !important;
 }
 .mb-35 {
@@ -16294,10 +16294,16 @@ table.dataTable.table-striped > tbody > tr.odd {
 .mb-44 {
   margin-bottom: 44px !important;
 }
-.mb-107{
+.mb-107 {
   margin-bottom: 107px !important;
 }
 .printPageTableHead {
   background-color: #002d3f;
   color: white;
+}
+
+@media print {
+  .printCardHeader {
+    display: none !important;
+  }
 }
