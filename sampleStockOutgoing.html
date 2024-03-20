@@ -1,4 +1,5 @@
 <!-- @format -->
+<!-- @format -->
 
 <!DOCTYPE html>
 <html
@@ -12,7 +13,7 @@
 >
   <head>
     <meta charset="utf-8" />
-    <title>Add Customer | Meeka Pharmacare</title>
+    <title>Sample Stock | Meeka Pharmacare</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       content="Premium Multipurpose Admin & Dashboard Template"
@@ -1104,317 +1105,136 @@
                           class="card-header d-flex justify-content-between align-items-center"
                         >
                           <div>
-                            <h5 class="card-title mb-0">Add Customer</h5>
+                            <h5 class="card-title mb-0">Sample Stock</h5>
                           </div>
                           <div>
-                            <button
-                              class="btn viewBtn d-flex align-items-center"
-                            >
-                              <span><i class="las la-eye me-2"></i></span>
-                              <span>View Customer List</span>
-                            </button>
+                            <a href="addSampleStock.html">
+                              <button
+                                class="btn primaryBtn d-flex align-items-center"
+                              >
+                                <span><i class="las la-plus me-2"></i></span>
+                                <span>Add Sample</span>
+                              </button>
+                            </a>
                           </div>
                         </div>
-                        <div class="card-body p-5">
-                          <form action="">
-                            <div class="row">
-                              <div class="col-lg-4">
-                                <div class="mb-3">
-                                  <label class="form-label"
-                                    >Customer Name</label
+                        <div class="">
+                          <div class="">
+                            <div class="card-body">
+                              <ul
+                                class="col-lg-6 col-xl-4 nav nav-tabs nav-tabs-custom nav-success nav-justified mb-3"
+                                role="tablist"
+                              >
+                                <li class="nav-item">
+                                  <a class="nav-link" href="sampleStock.html">
+                                    InComing
+                                  </a>
+                                </li>
+                                <li class="nav-item">
+                                  <a
+                                    class="nav-link active"
+                                    data-bs-toggle="tab"
+                                    href="#outComing"
+                                    role="tab"
                                   >
-                                  <input
-                                    type="text"
-                                    class="form-control"
-                                    name="customer_name"
-                                    placeholder="Type Here"
-                                  />
-                                </div>
-                              </div>
-                              <div class="col-lg-4">
-                                <div class="mb-3">
-                                  <label class="form-label"
-                                    >Official Email</label
-                                  >
-                                  <input
-                                    type="email"
-                                    class="form-control"
-                                    name="email"
-                                    placeholder="Type Here"
-                                  />
-                                </div>
-                              </div>
-                              <div class="col-lg-4">
-                                <div class="mb-3">
-                                  <label class="form-label"
-                                    >Official Telephone</label
-                                  >
-                                  <input
-                                    type="number"
-                                    class="form-control"
-                                    name="contact_number"
-                                    placeholder="Type Here"
-                                  />
-                                </div>
-                              </div>
-                              <div class="col-lg-6">
-                                <div class="mb-3">
-                                  <label class="form-label"
-                                    >Company Office Address</label
-                                  >
-                                  <textarea
-                                    class="form-control"
-                                    name="company_office_address"
-                                    id=""
-                                    cols=""
-                                    rows="6"
-                                    placeholder="Type Here"
-                                  >
-                                  </textarea>
-                                </div>
-                              </div>
-                              <div class="col-lg-6">
-                                <div class="mb-3">
-                                  <label class="form-label"
-                                    >Company Factory Address</label
-                                  >
-                                  <textarea
-                                    class="form-control"
-                                    name="company_factory_address"
-                                    id=""
-                                    cols=""
-                                    rows="6"
-                                    placeholder="Type Here"
-                                  >
-                                  </textarea>
-                                </div>
-                              </div>
-                              <div class="col-lg-4">
-                                <div class="mb-3">
-                                  <label class="form-label"
-                                    >Company Website Link</label
-                                  >
-                                  <input
-                                    type="text"
-                                    class="form-control"
-                                    name="company_website_link"
-                                    placeholder="Type Here"
-                                  />
-                                </div>
-                              </div>
+                                    OutGoing
+                                  </a>
+                                </li>
+                              </ul>
 
-                              <hr />
-
-                              <div class="row">
-                                <div class="col-lg-6">
-                                  <div>
-                                    <h5 class="card-title my-3">
-                                      Contact person 1
-                                    </h5>
-                                  </div>
-                                  <div class="row">
-                                    <div class="col-lg-6">
-                                      <div class="mb-3">
-                                        <label class="form-label">Name</label>
-                                        <input
-                                          type="text"
-                                          class="form-control"
-                                          name="name"
-                                          placeholder="Type Here"
-                                        />
-                                      </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                      <div class="mb-3">
-                                        <label class="form-label"
-                                          >Designation</label
-                                        >
-                                        <input
-                                          type="text"
-                                          class="form-control"
-                                          name="designation"
-                                          placeholder="Type Here"
-                                        />
-                                      </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                      <div class="mb-3">
-                                        <label class="form-label">Email</label>
-                                        <input
-                                          type="email"
-                                          class="form-control"
-                                          name="email"
-                                          placeholder="Type Here"
-                                        />
-                                      </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                      <div class="mb-3">
-                                        <label class="form-label"
-                                          >Alternative Email</label
-                                        >
-                                        <input
-                                          type="email"
-                                          class="form-control"
-                                          name="alternative_email"
-                                          placeholder="Type Here"
-                                        />
-                                      </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                      <div class="mb-3">
-                                        <label class="form-label"
-                                          >Phone Number</label
-                                        >
-                                        <input
-                                          type="number"
-                                          class="form-control"
-                                          name="phone"
-                                          placeholder="Type Here"
-                                        />
-                                      </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                      <div class="mb-3">
-                                        <label class="form-label"
-                                          >Alternative Phone Number</label
-                                        >
-                                        <input
-                                          type="number"
-                                          class="form-control"
-                                          name="alternative_phone"
-                                          placeholder="Type Here"
-                                        />
-                                      </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                      <div class="mb-3">
-                                        <label class="form-label"
-                                          >Whatsapp</label
-                                        >
-                                        <input
-                                          type="text"
-                                          class="form-control"
-                                          name="whatsapp"
-                                          placeholder="Type Here"
-                                        />
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="col-lg-6">
-                                  <div>
-                                    <h5 class="card-title my-3">
-                                      Contact person 2
-                                    </h5>
-                                  </div>
-                                  <div class="row">
-                                    <div class="col-lg-6">
-                                      <div class="mb-3">
-                                        <label class="form-label">Name</label>
-                                        <input
-                                          type="text"
-                                          class="form-control"
-                                          name="name"
-                                          placeholder="Type Here"
-                                        />
-                                      </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                      <div class="mb-3">
-                                        <label class="form-label"
-                                          >Designation</label
-                                        >
-                                        <input
-                                          type="text"
-                                          class="form-control"
-                                          name="designation"
-                                          placeholder="Type Here"
-                                        />
-                                      </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                      <div class="mb-3">
-                                        <label class="form-label">Email</label>
-                                        <input
-                                          type="email"
-                                          class="form-control"
-                                          name="email"
-                                          placeholder="Type Here"
-                                        />
-                                      </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                      <div class="mb-3">
-                                        <label class="form-label"
-                                          >Alternative Email</label
-                                        >
-                                        <input
-                                          type="email"
-                                          class="form-control"
-                                          name="alternative_email"
-                                          placeholder="Type Here"
-                                        />
-                                      </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                      <div class="mb-3">
-                                        <label class="form-label"
-                                          >Phone Number</label
-                                        >
-                                        <input
-                                          type="number"
-                                          class="form-control"
-                                          name="phone"
-                                          placeholder="Type Here"
-                                        />
-                                      </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                      <div class="mb-3">
-                                        <label class="form-label"
-                                          >Alternative Phone Number</label
-                                        >
-                                        <input
-                                          type="number"
-                                          class="form-control"
-                                          name="alternative_phone"
-                                          placeholder="Type Here"
-                                        />
-                                      </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                      <div class="mb-3">
-                                        <label class="form-label"
-                                          >Whatsapp</label
-                                        >
-                                        <input
-                                          type="text"
-                                          class="form-control"
-                                          name="whatsapp"
-                                          placeholder="Type Here"
-                                        />
-                                      </div>
-                                    </div>
+                              <!-- Tab panes -->
+                              <div class="tab-content text-muted">
+                                <div
+                                  class="tab-pane active"
+                                  id="inComing"
+                                  role="tabpanel"
+                                >
+                                  <div class="card-body table-responsive">
+                                    <table
+                                      id="buttons-datatables"
+                                      class="table table-striped align-middle"
+                                      style="width: 100%"
+                                    >
+                                      <thead>
+                                        <tr>
+                                          <th>#</th>
+                                          <th>Product</th>
+                                          <th>Batch No.</th>
+                                          <th>Manufacturer</th>
+                                          <th>Quantity</th>
+                                          <th>Mfg Date</th>
+                                          <th>Expiry Date</th>
+                                          <th class="colEndTh">
+                                            <div>Action</div>
+                                          </th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td>01</td>
+                                          <td>
+                                            <a href="singleSampleStock.html">
+                                              ( R )- (-)
+                                              norepinephrine-L-bitartrate
+                                              monohydrate
+                                            </a>
+                                          </td>
+                                          <td>23568952</td>
+                                          <td>Samhwa Biopharma, Korea</td>
+                                          <td>502</td>
+                                          <td>2020-02-01</td>
+                                          <td>2020-02-01</td>
+                                          <td class="colEnd">
+                                            <div class="dropdown">
+                                              <button
+                                                class="btn dropdown-toggle"
+                                                type="button"
+                                                id="dropdownMenuButton"
+                                                data-bs-toggle="dropdown"
+                                                aria-expanded="false"
+                                              >
+                                                <i
+                                                  class="las la-ellipsis-v"
+                                                ></i>
+                                              </button>
+                                              <ul
+                                                class="dropdown-menu"
+                                                aria-labelledby="dropdownMenuButton"
+                                              >
+                                                <li>
+                                                  <a
+                                                    class="dropdown-item"
+                                                    href="#"
+                                                    >Edit</a
+                                                  >
+                                                </li>
+                                                <li>
+                                                  <a
+                                                    class="dropdown-item"
+                                                    href="#"
+                                                    >Delete</a
+                                                  >
+                                                </li>
+                                                <li>
+                                                  <a
+                                                    class="dropdown-item"
+                                                    href="singleSampleStock.html"
+                                                    >View</a
+                                                  >
+                                                </li>
+                                              </ul>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
                                   </div>
                                 </div>
                               </div>
                             </div>
-                            <div class="col-lg-12">
-                              <div class="my-3">
-                                <div>
-                                  <button
-                                    class="btn primaryBtn d-flex align-items-center"
-                                  >
-                                    <span
-                                      ><i class="las la-check me-2"></i
-                                    ></span>
-                                    <span>Save</span>
-                                  </button>
-                                </div>
-                              </div>
-                            </div>
-                          </form>
+                            <!-- end card-body -->
+                          </div>
+                          <!-- end card -->
                         </div>
                       </div>
                     </div>

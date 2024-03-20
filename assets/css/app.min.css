@@ -16206,6 +16206,12 @@ span.flatpickr-weekday {
   color: #db282c;
 }
 
+.statusWarning {
+  border: 0.5px solid #b2b239;
+  background: rgb(255, 255, 0, 0.1);
+  color: #b2b239;
+}
+
 table.dataTable.table-striped > tbody > tr.odd {
   background: #f3f9ff !important;
 }
@@ -16306,4 +16312,12 @@ table.dataTable.table-striped > tbody > tr.odd {
   .printCardHeader {
     display: none !important;
   }
+}
+
+.sampleStockAdd .selectize-input {
+  padding: 0.5rem 0.9rem !important;
+  border-radius: 0 0.25rem 0.25rem 0 !important;
+}
+.sampleStockAdd input {
+  border-radius: 0.25rem 0 0 0.25rem !important;
 }
