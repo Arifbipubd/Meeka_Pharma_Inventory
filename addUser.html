@@ -1117,84 +1117,102 @@
                         </div>
                         <div class="card-body p-5">
                           <form action="">
-                            <div class="row">
+                            <div class="row justify-content-center">
                               <div class="col-lg-4">
-                                <div class="mb-3">
-                                  <label class="form-label">Name</label>
-                                  <input
-                                    type="text"
-                                    class="form-control"
-                                    name="name"
-                                    placeholder="Type Here"
-                                  />
-                                </div>
-                              </div>
-                              <div class="col-lg-4">
-                                <div class="mb-3">
-                                  <label class="form-label">email</label>
-                                  <input
-                                    type="email"
-                                    class="form-control"
-                                    name="email"
-                                    placeholder="Type Here"
-                                  />
-                                </div>
-                                <div class="col-lg-4">
-                                  <div class="mb-3">
-                                    <label class="form-label">Username</label>
-                                    <input
-                                      type="text"
-                                      class="form-control"
-                                      name="username"
-                                      placeholder="Type Here"
-                                    />
+                                <div class="row">
+                                  <div class="col-12">
+                                    <div class="mb-3">
+                                      <label class="form-label">Name</label>
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        name="name"
+                                        placeholder="Type Here"
+                                      />
+                                    </div>
                                   </div>
-                                </div>
-                                <div class="col-lg-4">
-                                  <div class="mb-3">
-                                    <label class="form-label">Password</label>
-                                    <input
-                                      type="password"
-                                      class="form-control"
-                                      name="password"
-                                      placeholder="Type Here"
-                                    />
+                                  <div class="col-12">
+                                    <div class="mb-3">
+                                      <label class="form-label">email</label>
+                                      <input
+                                        type="email"
+                                        class="form-control"
+                                        name="email"
+                                        placeholder="Type Here"
+                                      />
+                                    </div>
                                   </div>
-                                </div>
-                              </div>
-                              <div class="col-lg-4">
-                                <div>
-                                  <label
-                                    for=""
-                                    class="form-label d-flex align-items-center"
-                                    >Role
-                                    <i
-                                      class="las la-question-circle tooltip-icon mx-1"
-                                      data-bs-toggle="tooltip"
-                                      data-bs-placement="top"
-                                      title="Role"
-                                      rel="tooltip"
-                                    ></i
-                                  ></label>
-                                  <select id="" placeholder="Choose Role">
-                                    <option value="">Select a Role...</option>
-                                    <option>Role 1</option>
-                                    <option>Role 2</option>
-                                  </select>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-lg-12">
-                              <div class="my-3">
-                                <div>
-                                  <button
-                                    class="btn primaryBtn d-flex align-items-center"
-                                  >
-                                    <span
-                                      ><i class="las la-check me-2"></i
-                                    ></span>
-                                    <span>Save</span>
-                                  </button>
+                                  <div class="col-12">
+                                    <div>
+                                      <label
+                                        for=""
+                                        class="form-label d-flex align-items-center"
+                                        >Role
+                                        <i
+                                          class="las la-question-circle tooltip-icon mx-1"
+                                          data-bs-toggle="tooltip"
+                                          data-bs-placement="top"
+                                          title="Role"
+                                          rel="tooltip"
+                                        ></i
+                                      ></label>
+                                      <select id="" placeholder="Choose Role">
+                                        <option value="">
+                                          Select a Role...
+                                        </option>
+                                        <option>Role 1</option>
+                                        <option>Role 2</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="col-12">
+                                    <div class="mb-3">
+                                      <label class="form-label">Password</label>
+                                      <input
+                                        type="password"
+                                        class="form-control"
+                                        name="password"
+                                        id="password"
+                                        placeholder="Type Here"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="col-12">
+                                    <div class="mb-3">
+                                      <label class="form-label"
+                                        >Confirm Password</label
+                                      >
+                                      <input
+                                        type="password"
+                                        class="form-control"
+                                        name="confirm_password"
+                                        id="confirmPassword"
+                                        placeholder="Type Here"
+                                        oninput="validatePassword()"
+                                      />
+                                    </div>
+                                    <div
+                                      id="passwordError"
+                                      style="color: red"
+                                    ></div>
+                                  </div>
+                                  <div class="col-lg-12">
+                                    <div
+                                      class="my-3 d-flex justify-content-center"
+                                    >
+                                      <div>
+                                        <button
+                                          class="btn primaryBtn d-flex align-items-center"
+                                          id="submitButton"
+                                        >
+                                          <span
+                                            ><i class="las la-check me-2"></i
+                                          ></span>
+                                          <span>Save</span>
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -1297,6 +1315,22 @@
     <!-- App js -->
     <script src="assets/js/app.js"></script>
     <script>
+      function validatePassword() {
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirmPassword").value;
+        var passwordError = document.getElementById("passwordError");
+
+        if (password !== confirmPassword) {
+          passwordError.textContent = "Passwords do not match!";
+          passwordError.style.color = "red";
+          submitButton.disabled = true;
+        } else {
+          passwordError.textContent = "Passwords matched!";
+          passwordError.style.color = "green";
+          submitButton.disabled = false;
+        }
+      }
+
       $(document).ready(function () {
         $("select").selectize({
           sortField: "text",
