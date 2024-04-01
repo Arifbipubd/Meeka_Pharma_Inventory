@@ -1121,16 +1121,26 @@
                           <form action="">
                             <div class="row">
                               <div class="col-lg-6">
-                                <div class="mb-3">
-                                  <label class="form-label"
-                                    >Customer Name</label
-                                  >
-                                  <input
-                                    type="text"
-                                    class="form-control"
-                                    name="customer_name"
-                                    placeholder="Type Here"
-                                  />
+                                <div>
+                                  <label
+                                    for=""
+                                    class="form-label d-flex align-items-center"
+                                    >Customer
+                                    <i
+                                      class="las la-question-circle tooltip-icon mx-1"
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Customer"
+                                      rel="tooltip"
+                                    ></i
+                                  ></label>
+                                  <select id="" placeholder="Choose Customer">
+                                    <option value="">
+                                      Select a Customer...
+                                    </option>
+                                    <option>Customer 1</option>
+                                    <option>Customer 2</option>
+                                  </select>
                                 </div>
                               </div>
                               <div class="col-lg-6">
@@ -1324,5 +1334,32 @@
     <script src="assets/js/pages/form-file-upload.init.js"></script>
 
     <script src="assets/js/app.js"></script>
+
+    <!-------------Jquery-------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js"
+      integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css"
+      integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg="
+      crossorigin="anonymous"
+    />
+    <!-- App js -->
+    <script src="assets/js/app.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("select").selectize({
+          sortField: "text",
+        });
+      });
+
+      $(function () {
+        $("[rel='tooltip']").tooltip();
+      });
+    </script>
   </body>
 </html>
