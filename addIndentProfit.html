@@ -1214,11 +1214,13 @@
                               </div>
                               <div class="col-lg-4">
                                 <div class="mb-3">
-                                  <label class="form-label">Indent Date</label>
+                                  <label class="form-label"
+                                    >Manufacturer Indent Date
+                                  </label>
                                   <input
                                     type="date"
                                     class="form-control"
-                                    name="indent_date"
+                                    name="manufacturer_indent_date"
                                     placeholder="Type Here"
                                   />
                                 </div>
@@ -1226,12 +1228,13 @@
                               <div class="col-lg-4">
                                 <div class="mb-3">
                                   <label class="form-label"
-                                    >Unit Price USD</label
-                                  >
+                                    >Unit Buying Price (USD)
+                                  </label>
                                   <input
+                                    id="unit-buying-price"
                                     type="number"
                                     class="form-control"
-                                    name="unit_price"
+                                    name="unit_buying_price"
                                     placeholder="Type Here"
                                   />
                                 </div>
@@ -1239,47 +1242,136 @@
                               <div class="col-lg-4">
                                 <div class="mb-3">
                                   <label class="form-label"
-                                    >Net Price usd</label
-                                  >
+                                    >Unit Selling Price (USD)
+                                  </label>
                                   <input
+                                    id="unit-selling-price"
                                     type="number"
                                     class="form-control"
-                                    name="net_price"
+                                    name="net_selling_price"
                                     placeholder="Type Here"
                                   />
                                 </div>
                               </div>
                               <div class="col-lg-4">
+                                <label class="form-label">Quantity</label>
+                                <div class="d-flex sampleStockAdd">
+                                  <div class="w-75">
+                                    <input
+                                      id="quantity"
+                                      type="number"
+                                      class="form-control"
+                                      name="clearing_cost"
+                                      placeholder="Type Here"
+                                    />
+                                  </div>
+                                  <div class="h-100 w-25">
+                                    <select id="">
+                                      <option>kg</option>
+                                      <option>gm</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-lg-4">
                                 <div class="mb-3">
-                                  <label class="form-label">Quantity</label>
+                                  <label class="form-label"
+                                    >Total Buying Price (USD)</label
+                                  >
                                   <input
+                                    id="total-buying-price"
                                     type="number"
                                     class="form-control"
-                                    name="quantity"
+                                    name="total_buying_price"
                                     placeholder="Type Here"
+                                    readonly
                                   />
                                 </div>
                               </div>
                               <div class="col-lg-4">
                                 <div class="mb-3">
                                   <label class="form-label"
-                                    >Total Amount USD</label
-                                  >
+                                    >Total Selling Price (USD)
+                                  </label>
                                   <input
+                                    id="total-selling-price"
                                     type="number"
                                     class="form-control"
-                                    name="total_amount"
+                                    name="total_selling_price"
                                     placeholder="Type Here"
+                                    readonly
                                   />
                                 </div>
                               </div>
                               <div class="col-lg-4">
                                 <div class="mb-3">
-                                  <label class="form-label">Profit USD</label>
+                                  <label class="form-label">Profit (USD)</label>
                                   <input
+                                    id="profit"
                                     type="number"
                                     class="form-control"
                                     name="profit"
+                                    placeholder="Type Here"
+                                    readonly
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-lg-4">
+                                <div>
+                                  <label
+                                    for=""
+                                    class="form-label d-flex align-items-center"
+                                    >Freight
+                                    <i
+                                      class="las la-question-circle tooltip-icon mx-1"
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Freight"
+                                      rel="tooltip"
+                                    ></i
+                                  ></label>
+                                  <select id="" placeholder="Choose Freight">
+                                    <option value="">
+                                      Select a Freight...
+                                    </option>
+                                    <option>Freight 1</option>
+                                    <option>Freight 2</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="col-lg-4">
+                                <div class="mb-3">
+                                  <label class="form-label"
+                                    >Freight Unit Cost</label
+                                  >
+                                  <input
+                                    type="number"
+                                    class="form-control"
+                                    name="freight_unit_cost"
+                                    placeholder="Type Here"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-lg-4">
+                                <div class="mb-3">
+                                  <label class="form-label">COO Charge</label>
+                                  <input
+                                    type="number"
+                                    class="form-control"
+                                    name="coo_charge"
+                                    placeholder="Type Here"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-lg-4">
+                                <div class="mb-3">
+                                  <label class="form-label"
+                                    >Switch BL Charge</label
+                                  >
+                                  <input
+                                    type="number"
+                                    class="form-control"
+                                    name="switch_bl_charge"
                                     placeholder="Type Here"
                                   />
                                 </div>
@@ -1398,6 +1490,42 @@
     />
     <!-- App js -->
     <script src="assets/js/app.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const unitBuyingPriceInput =
+          document.getElementById("unit-buying-price");
+        const unitSellingPriceInput =
+          document.getElementById("unit-selling-price");
+        const quantityInput = document.getElementById("quantity");
+        const totalBuyingPriceInput =
+          document.getElementById("total-buying-price");
+        const totalSellingPriceInput = document.getElementById(
+          "total-selling-price"
+        );
+        const profitInput = document.getElementById("profit");
+
+        [unitBuyingPriceInput, unitSellingPriceInput, quantityInput].forEach(
+          (input) => {
+            input.addEventListener("input", function () {
+              const unitBuyingPrice =
+                parseFloat(unitBuyingPriceInput.value) || 0;
+              const unitSellingPrice =
+                parseFloat(unitSellingPriceInput.value) || 0;
+              const quantity = parseFloat(quantityInput.value) || 0;
+
+              const totalBuyingPrice = unitBuyingPrice * quantity;
+              const totalSellingPrice = unitSellingPrice * quantity;
+              const profit = totalSellingPrice - totalBuyingPrice;
+
+              totalBuyingPriceInput.value = totalBuyingPrice;
+              totalSellingPriceInput.value = totalSellingPrice;
+              profitInput.value = profit;
+            });
+          }
+        );
+      });
+    </script>
+
     <script>
       $(document).ready(function () {
         $("select").selectize({
