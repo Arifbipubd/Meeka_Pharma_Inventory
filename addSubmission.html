@@ -1339,40 +1339,52 @@
                                 </div>
                               </div>
                               <div class="col-lg-6">
-                                <div class="mb-3">
-                                  <label class="form-label">Ref</label>
-                                  <input
-                                    type="text"
-                                    class="form-control"
-                                    name="ref"
-                                    placeholder="Type Here"
-                                  />
+                                <label class="form-label">Quantity</label>
+                                <div class="d-flex sampleStockAdd">
+                                  <div class="w-75">
+                                    <input
+                                      id="quantity"
+                                      type="number"
+                                      class="form-control"
+                                      name="clearing_cost"
+                                      placeholder="Type Here"
+                                    />
+                                  </div>
+                                  <div class="h-100 w-25">
+                                    <select id="">
+                                      <option>kg</option>
+                                      <option>gm</option>
+                                    </select>
+                                  </div>
                                 </div>
                               </div>
                               <div class="col-lg-6">
                                 <div>
-                                  <label
-                                    for=""
-                                    class="form-label d-flex align-items-center"
-                                    >Reference Documents
-                                    <i
-                                      class="las la-question-circle tooltip-icon mx-1"
-                                      data-bs-toggle="tooltip"
-                                      data-bs-placement="top"
-                                      title="Reference Documents"
-                                      rel="tooltip"
-                                    ></i
-                                  ></label>
-                                  <select
-                                    id=""
-                                    placeholder="Choose Reference Documents"
-                                  >
-                                    <option value="">
-                                      Select a Reference Documents...
-                                    </option>
-                                    <option>Reference Documents 1</option>
-                                    <option>Reference Documents 2</option>
-                                  </select>
+                                  <label class="form-label">Ref</label>
+                                  <textarea
+                                    class="form-control"
+                                    rows="1"
+                                    placeholder="Type Here"
+                                  ></textarea>
+                                </div>
+                              </div>
+                              <div class="col-lg-4">
+                                <div
+                                  class="d-flex align-items-center gap-2 mt-2"
+                                >
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      id="formCheck"
+                                    />
+                                    <label
+                                      class="form-check-label"
+                                      for="formCheck"
+                                    >
+                                      Reference
+                                    </label>
+                                  </div>
                                 </div>
                               </div>
                               <div class="">
@@ -1386,7 +1398,7 @@
                                 <div
                                   class="row justify-content-center align-items-center todoInputDiv"
                                 >
-                                  <div class="col-lg-3">
+                                  <div class="col-lg-4">
                                     <div class="mb-3">
                                       <label class="form-label"
                                         >Standard/Garde</label
@@ -1399,24 +1411,13 @@
                                       />
                                     </div>
                                   </div>
-                                  <div class="col-lg-3">
+                                  <div class="col-lg-4">
                                     <div class="mb-3">
                                       <label class="form-label">Batch No</label>
                                       <input
                                         type="text"
                                         class="form-control"
                                         name="batch_no"
-                                        placeholder="Type Here"
-                                      />
-                                    </div>
-                                  </div>
-                                  <div class="col-lg-2">
-                                    <div class="mb-3">
-                                      <label class="form-label">Quantity</label>
-                                      <input
-                                        type="text"
-                                        class="form-control"
-                                        name="quantity"
                                         placeholder="Type Here"
                                       />
                                     </div>
