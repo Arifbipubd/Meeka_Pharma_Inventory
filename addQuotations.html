@@ -880,62 +880,6 @@
           </div>
         </div>
       </header>
-
-      <!-- removeNotificationModal -->
-      <div
-        id="removeNotificationModal"
-        class="modal fade zoomIn"
-        tabindex="-1"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-                id="NotificationModalbtn-close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <div class="mt-2 text-center">
-                <lord-icon
-                  src="https://cdn.lordicon.com/gsqxdxog.json"
-                  trigger="loop"
-                  colors="primary:#f7b84b,secondary:#f06548"
-                  style="width: 100px; height: 100px"
-                ></lord-icon>
-                <div class="mt-4 pt-2 fs-15 mx-4 mx-sm-5">
-                  <h4>Are you sure ?</h4>
-                  <p class="text-muted mx-4 mb-0">
-                    Are you sure you want to remove this Notification ?
-                  </p>
-                </div>
-              </div>
-              <div class="d-flex gap-2 justify-content-center mt-4 mb-2">
-                <button
-                  type="button"
-                  class="btn w-sm btn-light"
-                  data-bs-dismiss="modal"
-                >
-                  Close
-                </button>
-                <button
-                  type="button"
-                  class="btn w-sm btn-danger"
-                  id="delete-notification"
-                >
-                  Yes, Delete It!
-                </button>
-              </div>
-            </div>
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-      </div>
       <!-- /.modal -->
       <!-- ========== App Menu ========== -->
       <div class="app-menu navbar-menu">
@@ -1141,14 +1085,26 @@
                                 </div>
                               </div>
                               <div class="col-lg-3">
-                                <div class="mb-3">
-                                  <label class="form-label">Buyer Name</label>
-                                  <input
-                                    type="text"
-                                    class="form-control"
-                                    name="buyer_name"
-                                    placeholder="Type Here"
-                                  />
+                                <div>
+                                  <label
+                                    for=""
+                                    class="form-label d-flex align-items-center"
+                                    >Buyer Name
+                                    <i
+                                      class="las la-question-circle tooltip-icon mx-1"
+                                      data-bs-toggle="tooltip"
+                                      data-bs-placement="top"
+                                      title="Buyer Name"
+                                      rel="tooltip"
+                                    ></i
+                                  ></label>
+                                  <select id="" placeholder="Choose Buyer Name">
+                                    <option value="">
+                                      Select a Buyer Name...
+                                    </option>
+                                    <option>Buyer Name 1</option>
+                                    <option>Buyer Name 2</option>
+                                  </select>
                                 </div>
                               </div>
                               <div class="col-lg-3">
@@ -1162,20 +1118,29 @@
                                   />
                                 </div>
                               </div>
-                              <div class="col-lg-12">
-                                <div class="mb-3">
+                              <div class="col-lg-3 mb-3">
+                                <div>
                                   <label class="form-label"
                                     >Buyer Address</label
                                   >
-                                  <input
-                                    type="text"
+                                  <textarea
                                     class="form-control"
-                                    name="buyer_address"
+                                    rows="1"
                                     placeholder="Type Here"
-                                  />
+                                  ></textarea>
                                 </div>
                               </div>
-                              <div class="col-lg-6">
+                              <div class="col-lg-3 mb-3">
+                                <div>
+                                  <label class="form-label">Message Body</label>
+                                  <textarea
+                                    class="form-control"
+                                    rows="1"
+                                    placeholder="Type Here"
+                                  ></textarea>
+                                </div>
+                              </div>
+                              <div class="col-lg-3">
                                 <div class="mb-3">
                                   <label class="form-label">K/Attn</label>
                                   <input
@@ -1186,7 +1151,7 @@
                                   />
                                 </div>
                               </div>
-                              <div class="col-lg-6">
+                              <div class="col-lg-3">
                                 <div class="mb-3">
                                   <label class="form-label"
                                     >Quotation Subject</label
@@ -1197,20 +1162,6 @@
                                     name="quotation_subject"
                                     placeholder="Type Here"
                                   />
-                                </div>
-                              </div>
-                              <div class="col-lg-12">
-                                <div class="mb-3">
-                                  <label class="form-label">Message Body</label>
-                                  <textarea
-                                    class="form-control"
-                                    name="message_body"
-                                    id=""
-                                    cols=""
-                                    rows="6"
-                                    placeholder="Type Here"
-                                  >
-                                  </textarea>
                                 </div>
                               </div>
                               <div class="col-lg-4">
@@ -1395,20 +1346,16 @@
                                   />
                                 </div>
                               </div>
-                              <div class="col-lg-12">
-                                <div class="mb-3">
+                              <div class="col-lg-4 mb-3">
+                                <div>
                                   <label class="form-label"
                                     >Conclusion Message Body</label
                                   >
                                   <textarea
                                     class="form-control"
-                                    name="conclusion_message_body"
-                                    id=""
-                                    cols=""
-                                    rows="6"
+                                    rows="1"
                                     placeholder="Type Here"
-                                  >
-                                  </textarea>
+                                  ></textarea>
                                 </div>
                               </div>
                               <div class="col-lg-4">
@@ -1431,6 +1378,178 @@
                                     name="designation"
                                     placeholder="Type Here"
                                   />
+                                </div>
+                              </div>
+                              <div class="col-lg-4 mb-3">
+                                <div>
+                                  <label class="form-label">Present User</label>
+                                  <textarea
+                                    class="form-control"
+                                    rows="1"
+                                    placeholder="Type Here"
+                                  ></textarea>
+                                </div>
+                              </div>
+                              <div class="col-lg-4">
+                                <div class="mb-3">
+                                  <label class="form-label"
+                                    >Contact Number</label
+                                  >
+                                  <input
+                                    type="number"
+                                    class="form-control"
+                                    name="contact_number"
+                                    placeholder="Type Here"
+                                  />
+                                </div>
+                              </div>
+                              <div
+                                class="d-flex justify-content-between align-items-center"
+                              >
+                                <div>
+                                  <h5 class="card-title my-5">Purchase Item</h5>
+                                </div>
+                              </div>
+                              <div id="todoInputDiv">
+                                <div
+                                  class="row align-items-center todoInputDiv"
+                                >
+                                  <div class="col-lg-3">
+                                    <div>
+                                      <label
+                                        for=""
+                                        class="form-label d-flex align-items-center"
+                                        >Manufacturer
+                                        <i
+                                          class="las la-question-circle tooltip-icon mx-1"
+                                          data-bs-toggle="tooltip"
+                                          data-bs-placement="top"
+                                          title="Manufacturer"
+                                          rel="tooltip"
+                                        ></i
+                                      ></label>
+                                      <select
+                                        id=""
+                                        placeholder="Choose Manufacturer"
+                                      >
+                                        <option value="">
+                                          Select a Manufacturer...
+                                        </option>
+                                        <option>Manufacturer 1</option>
+                                        <option>Manufacturer 2</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-3">
+                                    <div>
+                                      <label
+                                        for=""
+                                        class="form-label d-flex align-items-center"
+                                        >Product
+                                        <i
+                                          class="las la-question-circle tooltip-icon mx-1"
+                                          data-bs-toggle="tooltip"
+                                          data-bs-placement="top"
+                                          title="Product"
+                                          rel="tooltip"
+                                        ></i
+                                      ></label>
+                                      <select
+                                        id=""
+                                        placeholder="Choose Product"
+                                      >
+                                        <option value="">
+                                          Select a Product...
+                                        </option>
+                                        <option>Product 1</option>
+                                        <option>Product 2</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-3">
+                                    <label class="form-label">Unit Price</label>
+                                    <div class="d-flex sampleStockAdd">
+                                      <div class="w-75">
+                                        <input
+                                          type="number"
+                                          class="form-control"
+                                          name="unit_price"
+                                          placeholder="Type Here"
+                                        />
+                                      </div>
+                                      <div class="h-100 w-25">
+                                        <select id="">
+                                          <option>kg</option>
+                                          <option>gm</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-3">
+                                    <label class="form-label">Quantity</label>
+                                    <div class="d-flex sampleStockAdd">
+                                      <div class="w-75">
+                                        <input
+                                          type="number"
+                                          class="form-control"
+                                          name="clearing_cost"
+                                          placeholder="Type Here"
+                                        />
+                                      </div>
+                                      <div class="h-100 w-25">
+                                        <select id="">
+                                          <option>kg</option>
+                                          <option>gm</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4">
+                                    <div class="mb-3">
+                                      <label class="form-label">Supplier</label>
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        name="supplier"
+                                        placeholder="Type Here"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4">
+                                    <div class="mb-3">
+                                      <label class="form-label"
+                                        >Shipping Method</label
+                                      >
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        name="shipping_method"
+                                        placeholder="Type Here"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div id="todoAddBtn" class="col-lg-1">
+                                    <button
+                                      type="button"
+                                      onclick="addDiv()"
+                                      class="btn todoAddBtn d-flex align-items-center"
+                                    >
+                                      <i class="las la-plus"></i>
+                                    </button>
+                                  </div>
+                                  <div
+                                    id="todoRemoveBtn"
+                                    style="display: none"
+                                    class="col-lg-1"
+                                  >
+                                    <button
+                                      type="button"
+                                      onclick="removeDiv(this)"
+                                      class="btn todoRemoveBtn"
+                                    >
+                                      <i class="las la-minus"></i>
+                                    </button>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -1557,6 +1676,24 @@
       $(function () {
         $("[rel='tooltip']").tooltip();
       });
+    </script>
+    <script>
+      function addDiv() {
+        // Clone the hidden div
+        let addBtn = document.getElementById("todoAddBtn");
+        let removeBtn = document.getElementById("todoRemoveBtn");
+        var cloneDiv = document.querySelector(".todoInputDiv").cloneNode(true);
+        cloneDiv.style.display = "flex"; // Show the cloned div
+        addBtn.style.display = "none";
+        removeBtn.style.display = "flex";
+        document.getElementById("todoInputDiv").appendChild(cloneDiv); // Append to container
+      }
+
+      function removeDiv(element) {
+        // Remove the parent div of the clicked remove button
+        element.parentNode.parentNode.remove();
+      }
+      addDiv();
     </script>
   </body>
 </html>
