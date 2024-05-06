@@ -880,62 +880,6 @@
           </div>
         </div>
       </header>
-
-      <!-- removeNotificationModal -->
-      <div
-        id="removeNotificationModal"
-        class="modal fade zoomIn"
-        tabindex="-1"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-                id="NotificationModalbtn-close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <div class="mt-2 text-center">
-                <lord-icon
-                  src="https://cdn.lordicon.com/gsqxdxog.json"
-                  trigger="loop"
-                  colors="primary:#f7b84b,secondary:#f06548"
-                  style="width: 100px; height: 100px"
-                ></lord-icon>
-                <div class="mt-4 pt-2 fs-15 mx-4 mx-sm-5">
-                  <h4>Are you sure ?</h4>
-                  <p class="text-muted mx-4 mb-0">
-                    Are you sure you want to remove this Notification ?
-                  </p>
-                </div>
-              </div>
-              <div class="d-flex gap-2 justify-content-center mt-4 mb-2">
-                <button
-                  type="button"
-                  class="btn w-sm btn-light"
-                  data-bs-dismiss="modal"
-                >
-                  Close
-                </button>
-                <button
-                  type="button"
-                  class="btn w-sm btn-danger"
-                  id="delete-notification"
-                >
-                  Yes, Delete It!
-                </button>
-              </div>
-            </div>
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-      </div>
       <!-- /.modal -->
       <!-- ========== App Menu ========== -->
       <div class="app-menu navbar-menu">
@@ -1201,19 +1145,6 @@
                               </div>
                               <div class="col-lg-4">
                                 <div class="mb-3">
-                                  <label class="form-label"
-                                    >Submission Date</label
-                                  >
-                                  <input
-                                    type="date"
-                                    class="form-control"
-                                    name="submission_date"
-                                    placeholder="Type Here"
-                                  />
-                                </div>
-                              </div>
-                              <div class="col-lg-4">
-                                <div class="mb-3">
                                   <label class="form-label">LC Number</label>
                                   <input
                                     type="number"
@@ -1225,49 +1156,18 @@
                               </div>
                               <div class="col-lg-4">
                                 <div class="mb-3">
-                                  <label class="form-label">LC Date</label>
+                                  <label class="form-label">Issue Date</label>
                                   <input
                                     type="date"
                                     class="form-control"
-                                    name="lc_date"
+                                    name="issue_date"
                                     placeholder="Type Here"
                                   />
                                 </div>
                               </div>
                               <div class="col-lg-4">
-                                <div>
-                                  <label
-                                    for=""
-                                    class="form-label d-flex align-items-center"
-                                    >Country Origin Of Supplier
-                                    <i
-                                      class="las la-question-circle tooltip-icon mx-1"
-                                      data-bs-toggle="tooltip"
-                                      data-bs-placement="top"
-                                      title="Country Origin Of Supplier"
-                                      rel="tooltip"
-                                    ></i
-                                  ></label>
-                                  <select
-                                    class="selectize"
-                                    id=""
-                                    placeholder="Choose Country Origin Of Supplier"
-                                  >
-                                    <option value="">
-                                      Select a Country Origin Of Supplier...
-                                    </option>
-                                    <option>
-                                      Country Origin Of Supplier 1
-                                    </option>
-                                    <option>
-                                      Country Origin Of Supplier 2
-                                    </option>
-                                  </select>
-                                </div>
-                              </div>
-                              <div class="col-lg-4">
                                 <div class="mb-3">
-                                  <label class="form-label">Indent</label>
+                                  <label class="form-label">Indent/PI No</label>
                                   <input
                                     type="text"
                                     class="form-control"
@@ -1278,7 +1178,9 @@
                               </div>
                               <div class="col-lg-4">
                                 <div class="mb-3">
-                                  <label class="form-label">Indent Date</label>
+                                  <label class="form-label"
+                                    >Indent/PI Date</label
+                                  >
                                   <input
                                     type="date"
                                     class="form-control"
@@ -1287,31 +1189,7 @@
                                   />
                                 </div>
                               </div>
-                              <div class="col-lg-6">
-                                <div class="mb-3">
-                                  <label class="form-label">Proforma/PI</label>
-                                  <input
-                                    type="text"
-                                    class="form-control"
-                                    name="pi"
-                                    placeholder="Type Here"
-                                  />
-                                </div>
-                              </div>
-                              <div class="col-lg-6">
-                                <div class="mb-3">
-                                  <label class="form-label"
-                                    >Proforma Date</label
-                                  >
-                                  <input
-                                    type="date"
-                                    class="form-control"
-                                    name="proforma_date"
-                                    placeholder="Type Here"
-                                  />
-                                </div>
-                              </div>
-                              <div class="col-lg-6">
+                              <div class="col-lg-4">
                                 <div class="mb-3">
                                   <label class="form-label">Ref</label>
                                   <input
@@ -1322,7 +1200,7 @@
                                   />
                                 </div>
                               </div>
-                              <div class="col-lg-6">
+                              <div class="col-lg-4">
                                 <div>
                                   <label
                                     for=""
@@ -1349,6 +1227,7 @@
                                   </select>
                                 </div>
                               </div>
+
                               <div
                                 class="d-flex justify-content-between align-items-center"
                               >
@@ -1360,39 +1239,55 @@
                                 <div
                                   class="row align-items-center justify-content-center todoInputDiv"
                                 >
-                                  <div class="col-lg-2">
+                                  <div class="col-lg-3">
                                     <div>
                                       <label
                                         for=""
                                         class="form-label d-flex align-items-center"
-                                        >Name
-                                      </label>
+                                        >Product Name
+                                        <i
+                                          class="las la-question-circle tooltip-icon mx-1"
+                                          data-bs-toggle="tooltip"
+                                          data-bs-placement="top"
+                                          title="Product Name"
+                                          rel="tooltip"
+                                        ></i
+                                      ></label>
                                       <select
-                                        class="form-select mb-3"
-                                        aria-label="Default select example"
+                                        id=""
+                                        placeholder="Choose Product Name"
                                       >
-                                        <option selected>Choose Name</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
+                                        <option value="">
+                                          Select a Product Name...
+                                        </option>
+                                        <option>Product Name 1</option>
+                                        <option>Product Name 2</option>
                                       </select>
                                     </div>
                                   </div>
-                                  <div class="col-lg-1">
-                                    <div class="mb-3">
-                                      <label class="form-label">Quantity</label>
-                                      <input
-                                        type="number"
-                                        class="form-control"
-                                        name="quantity"
-                                        placeholder="Type Here"
-                                      />
+                                  <div class="col-lg-3">
+                                    <label class="form-label">Quantity</label>
+                                    <div class="d-flex sampleStockAdd">
+                                      <div class="w-75">
+                                        <input
+                                          type="number"
+                                          class="form-control"
+                                          name="clearing_cost"
+                                          placeholder="Type Here"
+                                        />
+                                      </div>
+                                      <div class="h-100 w-25">
+                                        <select id="">
+                                          <option>kg</option>
+                                          <option>gm</option>
+                                        </select>
+                                      </div>
                                     </div>
                                   </div>
                                   <div class="col-lg-2">
                                     <div class="mb-3">
                                       <label class="form-label"
-                                        >Rate Per KG</label
+                                        >Rate Per Unit</label
                                       >
                                       <input
                                         type="number"
@@ -1402,66 +1297,16 @@
                                       />
                                     </div>
                                   </div>
-                                  <div class="col-lg-1">
+                                  <div class="col-lg-3">
                                     <div class="mb-3">
                                       <label class="form-label"> Value</label>
                                       <input
                                         type="number"
                                         class="form-control"
                                         name="total_value"
+                                        id="total_value"
                                         placeholder="Type Here"
                                       />
-                                    </div>
-                                  </div>
-                                  <div class="col-lg-2">
-                                    <div>
-                                      <label
-                                        for=""
-                                        class="form-label d-flex align-items-center"
-                                        >Net/Buying Value
-                                      </label>
-                                      <select
-                                        class="form-select mb-3"
-                                        aria-label="Default select example"
-                                      >
-                                        <option selected>
-                                          Choose Net/Buying Value
-                                        </option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                      </select>
-                                    </div>
-                                  </div>
-                                  <div class="col-lg-1">
-                                    <div class="mb-3">
-                                      <label class="form-label">Profit</label>
-                                      <input
-                                        type="number"
-                                        class="form-control"
-                                        name="profit"
-                                        placeholder="Type Here"
-                                      />
-                                    </div>
-                                  </div>
-                                  <div class="col-lg-2">
-                                    <div>
-                                      <label
-                                        for=""
-                                        class="form-label d-flex align-items-center"
-                                        >Commission
-                                      </label>
-                                      <select
-                                        class="form-select mb-3"
-                                        aria-label="Default select example"
-                                      >
-                                        <option selected>
-                                          Choose Commission
-                                        </option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                      </select>
                                     </div>
                                   </div>
                                   <div id="todoAddBtn" class="col-lg-1">
@@ -1602,9 +1447,12 @@
     />
     <!-- App js -->
     <script src="assets/js/app.js"></script>
+    <!-- <script>
+
+    </script> -->
     <script>
       $(document).ready(function () {
-        $("select.selectize").selectize({
+        $("select").selectize({
           sortField: "text",
         });
       });
@@ -1613,6 +1461,31 @@
         $("[rel='tooltip']").tooltip();
       });
     </script>
+    <!-- <script>
+      function calculateLc() {
+        console.log("func calling");
+
+        // Get the values from the first two fields
+        var quantity = parseFloat(document.getElementById("quantity").value);
+        var rate = parseFloat(document.getElementById("rate").value);
+
+        console.log(quantity);
+        console.log(rate);
+
+        // Check if quantity and rate are valid numbers
+        if (!isNaN(quantity) && !isNaN(rate)) {
+          // Calculate the product
+          var result = quantity * rate;
+          console.log(result);
+
+          // Set the result in the third field
+          document.getElementById("total_value").value = result;
+        } else {
+          // If quantity or rate is not a valid number, clear the total value field
+          document.getElementById("total_value").value = "";
+        }
+      }
+    </script> -->
     <script>
       function addDiv() {
         // Clone the hidden div
