@@ -1078,7 +1078,7 @@
                                   ></label>
                                   <select
                                     class="selectize"
-                                    id=""
+                                    id="outsideSelect"
                                     placeholder="Choose Customer"
                                   >
                                     <option value="">
@@ -1105,7 +1105,7 @@
                                   ></label>
                                   <select
                                     class="selectize"
-                                    id=""
+                                    id="outsideSelect"
                                     placeholder="Choose Beneficiary"
                                   >
                                     <option value="">
@@ -1132,7 +1132,7 @@
                                   ></label>
                                   <select
                                     class="selectize"
-                                    id=""
+                                    id="outsideSelect"
                                     placeholder="Choose Manufacturer/Supplier"
                                   >
                                     <option value="">
@@ -1216,7 +1216,7 @@
                                   ></label>
                                   <select
                                     class="selectize"
-                                    id=""
+                                    id="outsideSelect"
                                     placeholder="Choose Reference Documents"
                                   >
                                     <option value="">
@@ -1450,7 +1450,7 @@
     <!-- <script>
 
     </script> -->
-    <script>
+    <!-- <script>
       $(document).ready(function () {
         $("select").selectize({
           sortField: "text",
@@ -1460,7 +1460,7 @@
       $(function () {
         $("[rel='tooltip']").tooltip();
       });
-    </script>
+    </script> -->
     <!-- <script>
       function calculateLc() {
         console.log("func calling");
@@ -1496,6 +1496,10 @@
         addBtn.style.display = "none";
         removeBtn.style.display = "flex";
         document.getElementById("todoInputDiv").appendChild(cloneDiv); // Append to container
+
+        $(cloneDiv).find("select").selectize({
+          sortField: "text",
+        });
       }
 
       function removeDiv(element) {
@@ -1503,6 +1507,11 @@
         element.parentNode.parentNode.remove();
       }
       addDiv();
+    </script>
+    <script>
+      $("select#outsideSelect").selectize({
+        sortField: "text",
+      });
     </script>
   </body>
 </html>
