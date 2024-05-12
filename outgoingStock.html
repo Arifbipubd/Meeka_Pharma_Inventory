@@ -1,4 +1,5 @@
 <!-- @format -->
+<!-- @format -->
 
 <!DOCTYPE html>
 <html
@@ -1048,23 +1049,15 @@
                           class="card-header d-flex justify-content-between align-items-center"
                         >
                           <div>
-                            <h5 class="card-title mb-0">All Stock</h5>
+                            <h5 class="card-title mb-0">Outgoing Stock</h5>
                           </div>
-                          <div class="d-flex gap-2">
-                            <a href="incomingStock.html">
+                          <div>
+                            <a href="addSampleStock.html">
                               <button
-                                class="btn primaryBtn d-flex align-items-center mb-2"
+                                class="btn primaryBtn d-flex align-items-center"
                               >
                                 <span><i class="las la-plus me-2"></i></span>
-                                <span>Add Incoming Stock</span>
-                              </button>
-                            </a>
-                            <a href="outgoingStock.html">
-                              <button
-                                class="btn primaryBtn d-flex align-items-center mb-2"
-                              >
-                                <span><i class="las la-plus me-2"></i></span>
-                                <span>Add Outgoing Stock</span>
+                                <span>Add Sample</span>
                               </button>
                             </a>
                           </div>
@@ -1077,12 +1070,7 @@
                                 role="tablist"
                               >
                                 <li class="nav-item">
-                                  <a
-                                    class="nav-link active"
-                                    data-bs-toggle="tab"
-                                    href="#allStock"
-                                    role="tab"
-                                  >
+                                  <a class="nav-link" href="sampleStock.html">
                                     All Stock
                                   </a>
                                 </li>
@@ -1092,7 +1080,12 @@
                                   </a>
                                 </li>
                                 <li class="nav-item">
-                                  <a class="nav-link" href="outgoingStock.html">
+                                  <a
+                                    class="nav-link active"
+                                    data-bs-toggle="tab"
+                                    href="#outGoingStock"
+                                    role="tab"
+                                  >
                                     Outgoing
                                   </a>
                                 </li>
@@ -1110,7 +1103,7 @@
                               <div class="tab-content text-muted">
                                 <div
                                   class="tab-pane active"
-                                  id="allStock"
+                                  id="outGoingStock"
                                   role="tabpanel"
                                 >
                                   <div class="card-body table-responsive">
@@ -1123,8 +1116,10 @@
                                         <tr>
                                           <th>#</th>
                                           <th>Product</th>
+                                          <th>Batch No.</th>
                                           <th>Manufacturer</th>
-                                          <th>Quantity in Stock</th>
+                                          <th>Quantity</th>
+                                          <th>Mfg Date</th>
                                           <th>Expiry Date</th>
                                           <th class="colEndTh">
                                             <div>Action</div>
@@ -1141,10 +1136,11 @@
                                               monohydrate
                                             </a>
                                           </td>
+                                          <td>23568952</td>
                                           <td>Samhwa Biopharma, Korea</td>
-                                          <td>200 kg</td>
-                                          <td>04 Nov, 2023</td>
-
+                                          <td>502</td>
+                                          <td>2020-02-01</td>
+                                          <td>2020-02-01</td>
                                           <td class="colEnd">
                                             <div class="dropdown">
                                               <button

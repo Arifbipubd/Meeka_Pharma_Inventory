@@ -1048,7 +1048,9 @@
                           class="card-header d-flex justify-content-between align-items-center"
                         >
                           <div>
-                            <h5 class="card-title mb-0">All Stock</h5>
+                            <h5 class="card-title mb-0">
+                              All Transactions Stocks
+                            </h5>
                           </div>
                           <div class="d-flex gap-2">
                             <a href="incomingStock.html">
@@ -1077,12 +1079,7 @@
                                 role="tablist"
                               >
                                 <li class="nav-item">
-                                  <a
-                                    class="nav-link active"
-                                    data-bs-toggle="tab"
-                                    href="#allStock"
-                                    role="tab"
-                                  >
+                                  <a class="nav-link" href="sampleStock.html">
                                     All Stock
                                   </a>
                                 </li>
@@ -1098,8 +1095,10 @@
                                 </li>
                                 <li class="nav-item">
                                   <a
-                                    class="nav-link"
-                                    href="allTransactionStock.html"
+                                    class="nav-link active"
+                                    data-bs-toggle="tab"
+                                    href="#allTransaction"
+                                    role="tab"
                                   >
                                     All Transactions
                                   </a>
@@ -1124,8 +1123,11 @@
                                           <th>#</th>
                                           <th>Product</th>
                                           <th>Manufacturer</th>
-                                          <th>Quantity in Stock</th>
-                                          <th>Expiry Date</th>
+                                          <th>Quantity</th>
+                                          <th>Issue Date</th>
+                                          <th>Estimate Date</th>
+                                          <th>Submission Date</th>
+                                          <th>Status</th>
                                           <th class="colEndTh">
                                             <div>Action</div>
                                           </th>
@@ -1144,7 +1146,13 @@
                                           <td>Samhwa Biopharma, Korea</td>
                                           <td>200 kg</td>
                                           <td>04 Nov, 2023</td>
-
+                                          <td>04 Nov, 2023</td>
+                                          <td>04 Nov, 2023</td>
+                                          <td>
+                                            <div class="status statusPending">
+                                              <span>Pending</span>
+                                            </div>
+                                          </td>
                                           <td class="colEnd">
                                             <div class="dropdown">
                                               <button
