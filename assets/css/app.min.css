@@ -16321,3 +16321,9 @@ table.dataTable.table-striped > tbody > tr.odd {
 .sampleStockAdd input {
   border-radius: 0.25rem 0 0 0.25rem !important;
 }
+
+
+
+.tabTableBg {
+  background-color: #f3f6f9 !important;
+}
