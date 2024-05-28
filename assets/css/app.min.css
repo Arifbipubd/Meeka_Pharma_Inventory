@@ -16246,7 +16246,9 @@ table.dataTable.table-striped > tbody > tr.odd {
 .todoInputDiv {
   display: none;
 }
-
+.todoInputDivNew {
+  display: none;
+}
 .viewBtn {
   background-color: transparent !important;
   border: 0.5px solid #6cbd98;
@@ -16321,8 +16323,6 @@ table.dataTable.table-striped > tbody > tr.odd {
 .sampleStockAdd input {
   border-radius: 0.25rem 0 0 0.25rem !important;
 }
-
-
 
 .tabTableBg {
   background-color: #f3f6f9 !important;

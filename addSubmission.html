@@ -1132,7 +1132,10 @@
                                       rel="tooltip"
                                     ></i
                                   ></label>
-                                  <select id="" placeholder="Choose Product">
+                                  <select
+                                    id="outsideSelect"
+                                    placeholder="Choose Product"
+                                  >
                                     <option value="">
                                       Select a Product...
                                     </option>
@@ -1156,7 +1159,7 @@
                                     ></i
                                   ></label>
                                   <select
-                                    id=""
+                                    id="outsideSelect"
                                     placeholder="Choose Sample Type"
                                   >
                                     <option value="">
@@ -1181,7 +1184,10 @@
                                       rel="tooltip"
                                     ></i
                                   ></label>
-                                  <select id="" placeholder="Choose Customer">
+                                  <select
+                                    id="outsideSelect"
+                                    placeholder="Choose Customer"
+                                  >
                                     <option value="">
                                       Select a Customer...
                                     </option>
@@ -1255,7 +1261,7 @@
                                     ></i
                                   ></label>
                                   <select
-                                    id=""
+                                    id="outsideSelect"
                                     placeholder="Choose Manufacturer"
                                   >
                                     <option value="">
@@ -1280,7 +1286,10 @@
                                       rel="tooltip"
                                     ></i
                                   ></label>
-                                  <select id="" placeholder="Choose Supplier">
+                                  <select
+                                    id="outsideSelect"
+                                    placeholder="Choose Supplier"
+                                  >
                                     <option value="">
                                       Select a Supplier...
                                     </option>
@@ -1289,7 +1298,7 @@
                                   </select>
                                 </div>
                               </div>
-                              <div class="col-lg-6">
+                              <div class="col-lg-4">
                                 <div>
                                   <label
                                     for=""
@@ -1304,7 +1313,7 @@
                                     ></i
                                   ></label>
                                   <select
-                                    id=""
+                                    id="outsideSelect"
                                     placeholder="Choose Cost Of Raw"
                                   >
                                     <option value="">
@@ -1315,7 +1324,7 @@
                                   </select>
                                 </div>
                               </div>
-                              <div class="col-lg-6">
+                              <div class="col-lg-4">
                                 <div>
                                   <label
                                     for=""
@@ -1329,7 +1338,10 @@
                                       rel="tooltip"
                                     ></i
                                   ></label>
-                                  <select id="" placeholder="Choose PD Sample">
+                                  <select
+                                    id="outsideSelect"
+                                    placeholder="Choose PD Sample"
+                                  >
                                     <option value="">
                                       Select a PD Sample...
                                     </option>
@@ -1338,27 +1350,7 @@
                                   </select>
                                 </div>
                               </div>
-                              <div class="col-lg-6">
-                                <label class="form-label">Quantity</label>
-                                <div class="d-flex sampleStockAdd">
-                                  <div class="w-75">
-                                    <input
-                                      id="quantity"
-                                      type="number"
-                                      class="form-control"
-                                      name="clearing_cost"
-                                      placeholder="Type Here"
-                                    />
-                                  </div>
-                                  <div class="h-100 w-25">
-                                    <select id="">
-                                      <option>kg</option>
-                                      <option>gm</option>
-                                    </select>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="col-lg-6">
+                              <div class="col-lg-4">
                                 <div>
                                   <label class="form-label">Ref</label>
                                   <textarea
@@ -1398,20 +1390,53 @@
                                 <div
                                   class="row justify-content-center align-items-center todoInputDiv"
                                 >
-                                  <div class="col-lg-4">
-                                    <div class="mb-3">
-                                      <label class="form-label"
-                                        >Standard/Garde</label
-                                      >
-                                      <input
-                                        type="text"
-                                        class="form-control"
-                                        name="grade"
-                                        placeholder="Type Here"
-                                      />
+                                  <div class="col-lg-3">
+                                    <label class="form-label">Quantity</label>
+                                    <div class="d-flex sampleStockAdd">
+                                      <div class="w-75">
+                                        <input
+                                          id="quantity"
+                                          type="number"
+                                          class="form-control"
+                                          name="clearing_cost"
+                                          placeholder="Type Here"
+                                        />
+                                      </div>
+                                      <div class="h-100 w-25">
+                                        <select id="">
+                                          <option>kg</option>
+                                          <option>gm</option>
+                                        </select>
+                                      </div>
                                     </div>
                                   </div>
-                                  <div class="col-lg-4">
+                                  <div class="col-lg-3">
+                                    <div>
+                                      <label
+                                        for=""
+                                        class="form-label d-flex align-items-center"
+                                        >Standard / Grade
+                                        <i
+                                          class="las la-question-circle tooltip-icon mx-1"
+                                          data-bs-toggle="tooltip"
+                                          data-bs-placement="top"
+                                          title="Standard / Grade"
+                                          rel="tooltip"
+                                        ></i
+                                      ></label>
+                                      <select
+                                        id=""
+                                        placeholder="Choose Standard"
+                                      >
+                                        <option value="">
+                                          Select a Standard / Grade...
+                                        </option>
+                                        <option>Standard / Grade 1</option>
+                                        <option>Standard / Grade 2</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-3">
                                     <div class="mb-3">
                                       <label class="form-label">Batch No</label>
                                       <input
@@ -1422,7 +1447,7 @@
                                       />
                                     </div>
                                   </div>
-                                  <div class="col-lg-3">
+                                  <div class="col-lg-2">
                                     <div class="mb-3">
                                       <label class="form-label"
                                         >No. Of Pack</label
@@ -1452,6 +1477,111 @@
                                     <button
                                       type="button"
                                       onclick="removeDiv(this)"
+                                      class="btn todoRemoveBtn"
+                                    >
+                                      <i class="las la-minus"></i>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="">
+                                <div>
+                                  <h5 class="card-title my-5">
+                                    Sample Submission Items New
+                                  </h5>
+                                </div>
+                              </div>
+                              <div id="todoInputDivNew">
+                                <div
+                                  class="row justify-content-center align-items-center todoInputDivNew"
+                                >
+                                  <div class="col-lg-3">
+                                    <label class="form-label">Quantity</label>
+                                    <div class="d-flex sampleStockAdd">
+                                      <div class="w-75">
+                                        <input
+                                          id="quantity"
+                                          type="number"
+                                          class="form-control"
+                                          name="clearing_cost"
+                                          placeholder="Type Here"
+                                        />
+                                      </div>
+                                      <div class="h-100 w-25">
+                                        <select id="">
+                                          <option>kg</option>
+                                          <option>gm</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-3">
+                                    <div>
+                                      <label
+                                        for=""
+                                        class="form-label d-flex align-items-center"
+                                        >Standard / Grade
+                                        <i
+                                          class="las la-question-circle tooltip-icon mx-1"
+                                          data-bs-toggle="tooltip"
+                                          data-bs-placement="top"
+                                          title="Standard / Grade"
+                                          rel="tooltip"
+                                        ></i
+                                      ></label>
+                                      <select
+                                        id=""
+                                        placeholder="Choose Standard"
+                                      >
+                                        <option value="">
+                                          Select a Standard / Grade...
+                                        </option>
+                                        <option>Standard / Grade 1</option>
+                                        <option>Standard / Grade 2</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-3">
+                                    <div class="mb-3">
+                                      <label class="form-label">Batch No</label>
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        name="batch_no"
+                                        placeholder="Type Here"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-2">
+                                    <div class="mb-3">
+                                      <label class="form-label"
+                                        >No. Of Pack</label
+                                      >
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        name="no_of_pack"
+                                        placeholder="Type Here"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div id="todoAddBtnNew" class="col-lg-1">
+                                    <button
+                                      type="button"
+                                      onclick="addDivNew()"
+                                      class="btn todoAddBtn d-flex align-items-center"
+                                    >
+                                      <i class="las la-plus"></i>
+                                    </button>
+                                  </div>
+                                  <div
+                                    id="todoRemoveBtnNew"
+                                    style="display: none"
+                                    class="col-lg-1"
+                                  >
+                                    <button
+                                      type="button"
+                                      onclick="removeDivNew(this)"
                                       class="btn todoRemoveBtn"
                                     >
                                       <i class="las la-minus"></i>
@@ -1574,17 +1704,6 @@
     <!-- App js -->
     <script src="assets/js/app.js"></script>
     <script>
-      $(document).ready(function () {
-        $("select").selectize({
-          sortField: "text",
-        });
-      });
-
-      $(function () {
-        $("[rel='tooltip']").tooltip();
-      });
-    </script>
-    <script>
       function addDiv() {
         // Clone the hidden div
         let addBtn = document.getElementById("todoAddBtn");
@@ -1594,6 +1713,10 @@
         addBtn.style.display = "none";
         removeBtn.style.display = "flex";
         document.getElementById("todoInputDiv").appendChild(cloneDiv); // Append to container
+
+        $(cloneDiv).find("select").selectize({
+          sortField: "text",
+        });
       }
 
       function removeDiv(element) {
@@ -1601,6 +1724,35 @@
         element.parentNode.parentNode.remove();
       }
       addDiv();
+    </script>
+    <script>
+      function addDivNew() {
+        // Clone the hidden div
+        let addBtn = document.getElementById("todoAddBtnNew");
+        let removeBtn = document.getElementById("todoRemoveBtnNew");
+        var cloneDiv = document
+          .querySelector(".todoInputDivNew")
+          .cloneNode(true);
+        cloneDiv.style.display = "flex"; // Show the cloned div
+        addBtn.style.display = "none";
+        removeBtn.style.display = "flex";
+        document.getElementById("todoInputDivNew").appendChild(cloneDiv); // Append to container
+
+        $(cloneDiv).find("select").selectize({
+          sortField: "text",
+        });
+      }
+
+      function removeDivNew(element) {
+        // Remove the parent div of the clicked remove button
+        element.parentNode.parentNode.remove();
+      }
+      addDivNew();
+    </script>
+    <script>
+      $("select#outsideSelect").selectize({
+        sortField: "text",
+      });
     </script>
   </body>
 </html>
