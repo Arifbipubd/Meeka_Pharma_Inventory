@@ -16327,3 +16327,7 @@ table.dataTable.table-striped > tbody > tr.odd {
 .tabTableBg {
   background-color: #f3f6f9 !important;
 }
+
+.outLineBtn {
+  border: 0.5px solid #405189 !important;
+}
