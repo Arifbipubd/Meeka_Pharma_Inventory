@@ -1235,6 +1235,24 @@
                                   ></textarea>
                                 </div>
                               </div>
+                              <div class="col-lg-12">
+                                <div class="form-check form-check-inline my-3">
+                                    <input class="form-check-input success check-outline outline-success" type="checkbox" id="source-validation-checkbox" value="source-validation">
+                                    <label class="form-check-label" for="source-validation-checkbox">Source Validation ?</label>
+                                  </div>
+                            </div>
+                            <div class="col-lg-6 source-validation-fields">
+                                <div class="form-group mb-3">
+                                  <label class=" mb-2 form-check-label " for="">Name of Validation</label>
+                                  <input type="text" class="form-control" name="name-of-validation" placeholder="Type Here" >
+                                </div>
+                            </div>
+                            <div class="col-lg-6 source-validation-fields">
+                                <div class="form-group mb-3">
+                                  <label class=" mb-2 form-check-label " for="">Validation Expiry Date</label>
+                                  <input type="date" class="form-control" name="validation-expiry-date" placeholder="Type Here" >
+                                </div>
+                            </div>
                             </div>
                             <div class="col-lg-12">
                               <div class="my-3">
@@ -1307,6 +1325,24 @@
         </div>
       </div>
     </div>
+
+
+    <script>
+      document.getElementById('source-validation-checkbox').addEventListener('change', function() {
+          const affiliationFields = document.querySelectorAll('.source-validation-fields');
+          
+          if (this.checked) {
+              affiliationFields.forEach(function(field) {
+                  field.classList.add('show');
+              });
+          } else {
+              affiliationFields.forEach(function(field) {
+                  field.classList.remove('show');
+              });
+          }
+      });
+      
+    </script>
 
     <!-- JAVASCRIPT -->
     <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
