@@ -16347,3 +16347,6 @@ table.dataTable.table-striped > tbody > tr.odd {
   opacity: 1;
   transform: translateY(0);
 }
+.submissionApproved{
+  color: #6cbd98;
+}
