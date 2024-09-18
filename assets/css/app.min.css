@@ -16309,12 +16309,33 @@ table.dataTable.table-striped > tbody > tr.odd {
   background-color: #002d3f;
   color: white;
 }
+.printCardHeader{
+  padding: 1rem;
+  border-bottom: 1px solid #e9ebec;
+}
 
 @media print {
+  * {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+  }
+  
   .printCardHeader {
     display: none !important;
   }
+
+  /* Ensure the footer is at the bottom of the last page only */
+  .print-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+  /* Define margins for the printed pages */
+  
 }
+
 
 .sampleStockAdd .selectize-input {
   padding: 0.5rem 0.9rem !important;
